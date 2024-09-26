@@ -21,12 +21,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
+            padding: 10px 20px; /* Reduced padding */
             background-color: #444;
         }
 
         .navbar .logo img {
-            width: 130px; 
+            width: 110px; /* Reduced logo size */
         }
 
         .navbar ul {
@@ -35,7 +35,7 @@
         }
 
         .navbar ul li {
-            margin-left: 30px;
+            margin-left: 20px; /* Reduced margin */
         }
 
         .navbar ul li a {
@@ -44,7 +44,7 @@
             font-size: 1.1em;
             font-weight: 600;
             transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
-            padding: 10px; /* Optional: Add padding for better spacing */
+            padding: 5px 10px; /* Reduced padding for links */
             border-radius: 5px; /* Optional: Add rounded corners */
         }
 
@@ -68,6 +68,11 @@
         .product-image img {
             width: 450px;
             height: auto;
+            transition: transform 0.3s ease; /* Smooth transition for scaling */
+        }
+
+        .product-image img:hover {
+            transform: scale(1.1); /* Scale up the image on hover */
         }
 
         .product-details {
