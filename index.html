@@ -3,67 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carl Stephene B. Padua</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SONY Page</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #121212;
+            background-color: #2b2b2b;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: black;
+            color: white;
+            text-align: left;
+            padding: 15px;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .container {
+            background-color: #d3d3d3;
+            width: 100%;
+            height: 80vh;
+            margin: 0 auto;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
         }
-
-        .container {
-            text-align: center;
-            background-color: #1e1e1e;
-            padding: 50px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-
-        p {
-            font-size: 1.2em;
-            color: #cfcfcf;
-        }
-
-        .buttons {
+        .link {
             margin-top: 20px;
+            text-align: center;
         }
-
-        .buttons a {
+        a {
             text-decoration: none;
-            background-color: #ffffff;
-            color: #121212;
-            padding: 15px 30px;
-            border-radius: 30px;
-            font-size: 1em;
-            margin: 10px;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            color: white;
+            font-size: 1.2em;
+            background-color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
         }
-
-        .buttons a:hover {
-            background-color: #121212;
-            color: #ffffff;
-            border: 1px solid #ffffff;
+        a:hover {
+            background-color: grey;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        SONY
+    </div>
     <div class="container">
-        <h1>Carl Stephene B. Padua</h1>
-        <p>Welcome to my GitHub Page. Below are links to some of my activities.</p>
-        
-        <div class="buttons">
-            <a href="https://example.com/activity3" target="_blank">Activity 4</a>
-            <a href="https://example.com/activity4" target="_blank">Activity 5</a>
+        <!-- Content area -->
+        <div class="link">
+            <a href="activity4.html">Go to Activity 4</a>
         </div>
     </div>
 </body>
