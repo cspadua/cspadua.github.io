@@ -53,8 +53,8 @@
         /* Product Section */
         .product-section {
             display: flex;
-            align-items: center;
-            justify-content: space-around;
+            align-items: center; /* Change to control vertical alignment */
+            justify-content: center; /* Change to control horizontal alignment */
             padding: 50px;
             background-color: white;
             margin: 20px;
@@ -62,9 +62,13 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+        .product-image {
+            margin-right: 20px; /* Adjust the margin to control spacing */
+        }
+
         .product-image img {
-            width: 1000px;
-            height: auto;
+            width: 300px; /* Adjust to your desired width */
+            height: auto; /* Keep the aspect ratio */
         }
 
         .product-details {
@@ -98,6 +102,10 @@
         }
 
         /* Product Video Section */
+        .product-video {
+            margin-left: 20px; /* Adjust the margin to control spacing */
+        }
+
         .product-video img {
             width: 250px;
             height: auto;
@@ -109,7 +117,7 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="images/sonylogo.png" alt="Sony Logo">
+                <img src="Activity 4/images/sonylogo.png" alt="Sony Logo">
             </div>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -123,7 +131,7 @@
     <!-- Product Section -->
     <section class="product-section">
         <div class="product-image">
-            <img src="images/sonywh20n.png" alt="SONY WH-CH720N">
+            <img src="Activity 4/images/sonywh20n.png" alt="SONY WH-CH720N">
         </div>
         <div class="product-details">
             <h1>SONY WH-CH720N</h1>
@@ -131,7 +139,7 @@
             <a href="#" class="buy-btn">Buy now</a>
         </div>
         <div class="product-video">
-            <img src="images/sonyvideo.png" alt="Sony Product Video">
+            <img src="Activity 4/images/sonyvideo.png" alt="Sony Product Video">
         </div>
     </section>
 </body>
