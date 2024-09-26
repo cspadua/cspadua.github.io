@@ -53,13 +53,14 @@
         /* Product Section */
         .product-section {
             display: flex;
-            align-items: center; /* Change to control vertical alignment */
-            justify-content: center; /* Change to control horizontal alignment */
+            align-items: flex-start; /* Align items to the top */
+            justify-content: flex-start; /* Align items to the left */
             padding: 50px;
             background-color: white;
             margin: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative; /* Position context for the video */
         }
 
         .product-image {
@@ -67,8 +68,8 @@
         }
 
         .product-image img {
-            width: 300px; /* Adjust to your desired width */
-            height: auto; /* Keep the aspect ratio */
+            width: auto; /* Keep the aspect ratio */
+            height: 1000px; /* Set height of the headphone image */
         }
 
         .product-details {
@@ -103,7 +104,9 @@
 
         /* Product Video Section */
         .product-video {
-            margin-left: 20px; /* Adjust the margin to control spacing */
+            position: absolute; /* Position this container absolutely */
+            bottom: 20px; /* Adjust distance from the bottom */
+            right: 20px; /* Adjust distance from the right */
         }
 
         .product-video img {
