@@ -27,7 +27,7 @@
         }
 
         .navbar .logo img {
-            width: 120px; /* Adjust the size of the Sony logo */
+            width: 120px;
             height: auto;
         }
 
@@ -53,27 +53,28 @@
         /* Product Section */
         .product-section {
             display: flex;
-            align-items: flex-start; /* Align items to the top */
-            justify-content: flex-start; /* Align items to the left */
+            align-items: flex-start;
+            justify-content: flex-start;
             padding: 50px;
             background-color: white;
             margin: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            position: relative; /* Position context for the video */
+            position: relative;
         }
 
         .product-image {
-            margin-right: 10px; /* Adjust the margin to control spacing */
+            margin-right: 10px;
         }
 
         .product-image img {
-            width: auto; /* Keep the aspect ratio */
-            height: 1000px; /* Set height of the headphone image */
+            width: auto;
+            height: 1000px;
         }
 
         .product-details {
             max-width: 400px;
+            position: relative; /* Set this to contain the button */
         }
 
         .product-details h1 {
@@ -96,6 +97,9 @@
             border-radius: 30px;
             font-size: 1.1em;
             transition: background-color 0.3s ease;
+            position: absolute; /* Position the button */
+            bottom: 20px; /* Move it up from the bottom */
+            right: 0px; /* Align to the right */
         }
 
         .buy-btn:hover {
@@ -104,9 +108,9 @@
 
         /* Product Video Section */
         .product-video {
-            position: absolute; /* Position this container absolutely */
-            bottom: 100px; /* Adjust distance from the bottom */
-            right: 60px; /* Adjust distance from the right */
+            position: absolute;
+            bottom: 100px;
+            right: 60px;
         }
 
         .product-video img {
