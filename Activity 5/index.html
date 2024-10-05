@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PILIPINAS Mayon Volcano</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #333;
+            color: white;
+        }
+
+        header {
+            position: relative;
+            height: 100vh;
+            background-image: url('images/mt-mayon.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        header img {
+            position: absolute;
+            top: -140px;
+            left: -120px;
+            height: 350px; 
+            width: auto;   
+        }
+
+        nav {
+            position: absolute;
+            top: 33px;
+            right: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            margin-top: 0px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-top: 300px;
+        }
+
+        p.intro {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            text-align: center;
+            max-width: 1000px;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin-top: -33px;
+            background-color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        .info-container {
+            display: flex;
+            justify-content: space-between; 
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .info-box {
+            background-color: #444;
+            border-radius: 8px;
+            width: calc(27% - 0px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+            padding: 20px;
+            color: white;
+            transition: transform 0.3s;
+        }
+
+        .info-box:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+        }
+
+        .info-box h4 {
+            margin: 0;
+        }
+
+        .info-box img {
+            width: 90%; 
+            height: 250px; 
+            object-fit: cover; 
+            margin-top: 10px; 
+            border-radius: 8px; 
+            transition: transform 0.3s; 
+        }
+
+        .info-box img:hover {
+            transform: scale(1.05); 
+        }
+
+        footer {
+            padding: 20px;
+            background-color: #252424;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .ph-image {
+            width: 100%; 
+            height: auto; 
+            margin-top: 30px; 
+            display: block; 
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .info-box {
+                width: calc(100% - 20px);
+            }
+            h1 {
+                font-size: 3rem; 
+            }
+            h2 {
+                font-size: 1.2rem; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="images/logo.png" alt="Logo">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+        <h1>Mayon Volcano</h1>
+        <h2>The Perfect Cone</h2>
+        <p class="intro">Mayon Volcano, located in the Bicol region of the Philippines, is renowned for its perfect cone shape and is one of the most active volcanoes in the country. Standing at 2,462 meters (8,077 feet), its stunning beauty attracts tourists and researchers alike. With over 50 recorded eruptions, Mayon has shaped both the landscape and the lives of surrounding communities, enriching the volcanic soil that supports local agriculture. Culturally significant to the Bicolano people, Mayon features prominently in local legends and festivals.</p>
+    </header>
+
+    <section>
+        <h3>About Mayon Volcano</h3>
+        <div class="info-container">
+            <div class="info-box">
+                <h4>Active Eruptions</h4>
+                <p>Mayon is one of the Philippines' most active volcanoes, having erupted over 50 times. Its eruptions are often characterized by lava flows and explosive activity.</p>
+                <img src="images/eruption.jpg" alt="Active Eruptions">
+            </div>
+            <div class="info-box">
+                <h4>Tourist Attraction</h4>
+                <p>With its stunning symmetrical cone, Mayon attracts visitors for its breathtaking views and hiking opportunities, especially at the Mayon Volcano Natural Park.</p>
+                <img src="images/tower.jpg" alt="Tourist Attraction">
+            </div>
+            <div class="info-box">
+                <h4>Cultural Significance</h4>
+                <p>Mayon holds cultural significance for the local Bicolano people, featuring in many local legends and stories passed down through generations.</p>
+                <img src="images/festival.jpg" alt="Cultural Significance">
+            </div>
+        </div>
+        <img src="images/ph.jpg" alt="Philippines" class="ph-image">
+    </section>
+
+    <footer>
+        <p>© 2024 PILIPINAS. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
