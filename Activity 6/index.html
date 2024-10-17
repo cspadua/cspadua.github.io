@@ -22,7 +22,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="https://cspadua.github.io/">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Features</a>
@@ -106,21 +106,20 @@
 
     var movieContainer = document.getElementById("movieContainer");
     for (var i = 0; i < movieNames.length; i++) {
-        movieContainer.innerHTML += `
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-                <div class="card my-3" id="movieCard${i}" onmouseenter="applyMovieHoverEffect(${i})" onmouseleave="removeMovieHoverEffect(${i})">
-                    <img id="movieImg${i}" src="${moviePics[i]}" class="card-img-top" alt="${movieNames[i]}">
-                    <div class="card-body" id="movieTitle${i}" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; opacity: 0; transition: opacity 0.3s ease; text-align: center;">
-                        <h5 class="card-title">${movieNames[i]}</h5>
-                    </div>
-                </div>
-            </div>
-        `;
+        movieContainer.innerHTML += 
+            '<div class="col-12 col-md-6 col-lg-4 col-xl-3">' +
+                '<div class="card my-3" id="movieCard' + i + '" onmouseenter="applyMovieHoverEffect(' + i + ')" onmouseleave="removeMovieHoverEffect(' + i + ')">' +
+                    '<img id="movieImg' + i + '" src="' + moviePics[i] + '" class="card-img-top" alt="' + movieNames[i] + '">' +
+                    '<div class="card-body" id="movieTitle' + i + '" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; opacity: 0; transition: opacity 0.3s ease; text-align: center;">' +
+                        '<h5 class="card-title">' + movieNames[i] + '</h5>' +
+                    '</div>' +
+                '</div>' +
+            '</div>';
     }
 
     function applyMovieHoverEffect(index) {
-        var img = document.getElementById(`movieImg${index}`);
-        var title = document.getElementById(`movieTitle${index}`);
+        var img = document.getElementById('movieImg' + index);
+        var title = document.getElementById('movieTitle' + index);
         
         img.style.filter = "blur(5px) grayscale(100%)";
         img.style.transition = "filter 0.3s ease";
@@ -129,16 +128,13 @@
     }
 
     function removeMovieHoverEffect(index) {
-        var img = document.getElementById(`movieImg${index}`);
-        var title = document.getElementById(`movieTitle${index}`);
+        var img = document.getElementById('movieImg' + index);
+        var title = document.getElementById('movieTitle' + index);
         
         img.style.filter = "none";
         title.style.opacity = 0;
     }
 </script>
-
-
-
 
 <script>
   var musicNames = [
@@ -165,21 +161,20 @@
 
   var musicContainer = document.getElementById("musicContainer");
   for (var i = 0; i < musicNames.length; i++) {
-      musicContainer.innerHTML += `
-          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-              <div class="card my-3" id="musicCard${i}" onmouseenter="applyMusicHoverEffect(${i})" onmouseleave="removeMusicHoverEffect(${i})">
-                  <img id="musicImg${i}" src="${musicPics[i]}" class="card-img-top" alt="${musicNames[i]}">
-                  <div class="card-body" id="musicTitle${i}" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; opacity: 0; transition: opacity 0.3s ease; text-align: center;">
-                      <h5 class="card-title">${musicNames[i]}</h5>
-                  </div>
-              </div>
-          </div>
-      `;
+      musicContainer.innerHTML += 
+          '<div class="col-12 col-md-6 col-lg-4 col-xl-3">' +
+              '<div class="card my-3" id="musicCard' + i + '" onmouseenter="applyMusicHoverEffect(' + i + ')" onmouseleave="removeMusicHoverEffect(' + i + ')">' +
+                  '<img id="musicImg' + i + '" src="' + musicPics[i] + '" class="card-img-top" alt="' + musicNames[i] + '">' +
+                  '<div class="card-body" id="musicTitle' + i + '" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; opacity: 0; transition: opacity 0.3s ease; text-align: center;">' +
+                      '<h5 class="card-title">' + musicNames[i] + '</h5>' +
+                  '</div>' +
+              '</div>' +
+          '</div>';
   }
 
   function applyMusicHoverEffect(index) {
-      var img = document.getElementById(`musicImg${index}`);
-      var title = document.getElementById(`musicTitle${index}`);
+      var img = document.getElementById('musicImg' + index);
+      var title = document.getElementById('musicTitle' + index);
       
       img.style.filter = "blur(5px) grayscale(100%)";
       img.style.transition = "filter 0.3s ease";
@@ -188,14 +183,13 @@
   }
 
   function removeMusicHoverEffect(index) {
-      var img = document.getElementById(`musicImg${index}`);
-      var title = document.getElementById(`musicTitle${index}`);
+      var img = document.getElementById('musicImg' + index);
+      var title = document.getElementById('musicTitle' + index);
       
       img.style.filter = "none";
       title.style.opacity = 0;
   }
 </script>
-
 
 <script>
   var gwenNames = [
@@ -222,21 +216,20 @@
 
   var gwenContainer = document.getElementById("gwenContainer");
   for (var i = 0; i < gwenNames.length; i++) {
-      gwenContainer.innerHTML += `
-          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-              <div class="card my-3" id="gwenCard${i}" onmouseenter="applyHoverEffect(${i})" onmouseleave="removeHoverEffect(${i})">
-                  <img id="gwenImg${i}" src="${gwenPics[i]}" class="card-img-top" alt="${gwenNames[i]}">
-                  <div class="card-body" id="gwenTitle${i}" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; opacity: 0; transition: opacity 0.3s ease; text-align: center;">
-                      <h5 class="card-title">${gwenNames[i]}</h5>
-                  </div>
-              </div>
-          </div>
-      `;
+      gwenContainer.innerHTML += 
+          '<div class="col-12 col-md-6 col-lg-4 col-xl-3">' +
+              '<div class="card my-3" id="gwenCard' + i + '" onmouseenter="applyHoverEffect(' + i + ')" onmouseleave="removeHoverEffect(' + i + ')">' +
+                  '<img id="gwenImg' + i + '" src="' + gwenPics[i] + '" class="card-img-top" alt="' + gwenNames[i] + '">' +
+                  '<div class="card-body" id="gwenTitle' + i + '" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; opacity: 0; transition: opacity 0.3s ease; text-align: center;">' +
+                      '<h5 class="card-title">' + gwenNames[i] + '</h5>' +
+                  '</div>' +
+              '</div>' +
+          '</div>';
   }
 
   function applyHoverEffect(index) {
-      var img = document.getElementById(`gwenImg${index}`);
-      var title = document.getElementById(`gwenTitle${index}`);
+      var img = document.getElementById('gwenImg' + index);
+      var title = document.getElementById('gwenTitle' + index);
       
       img.style.filter = "blur(5px) grayscale(100%)";
       img.style.transition = "filter 0.3s ease";
@@ -245,15 +238,14 @@
   }
 
   function removeHoverEffect(index) {
-      var img = document.getElementById(`gwenImg${index}`);
-      var title = document.getElementById(`gwenTitle${index}`);
+      var img = document.getElementById('gwenImg' + index);
+      var title = document.getElementById('gwenTitle' + index);
       
       img.style.filter = "none";
       
       title.style.opacity = 0;
   }
 </script>
-
 
   <script>
     var colorMode = "light";
