@@ -14,24 +14,24 @@
             <a class="navbar-brand">
                 <img id="logo" src="images/logo.png" alt="logo" width="100" height="auto">
             </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item mx-4">
-                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item mx-4">
-                    <a class="nav-link" href="index.html">Projects</a>
-                </li>
-                <li class="nav-item mx-4">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="index.html">Projects</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
     </nav>
 
     <section>
@@ -48,7 +48,7 @@
     <div class="container">
         <div class="row my-5">
         </div>
-        <div class="row" id="activityContainer"></div>    
+        <div class="row" id="activityContainer"></div>
     </div>
 
     <script>
@@ -58,21 +58,21 @@
             "Activity 6",
             "Activity 7"
         ];
-    
+
         var activityPics = [
             "images/activity4.png",
             "images/activity5.png",
             "images/activity6.png",
             "images/activity7.png"
         ];
-    
+
         var activityLinks = [
             "Activity 4/sony.html",
             "Activity 5/index.html",
             "Activity 6/index.html",
-            "Activity 7/index.html"
+            "A  ctivity 7/index.html"
         ];
-    
+
         var activityContainer = document.getElementById("activityContainer");
         for (var i = 0; i < activity.length; i++) {
             activityContainer.innerHTML +=
@@ -80,7 +80,7 @@
                 '<a href="' + activityLinks[i] + '" style="text-decoration: none; color: inherit;">' +
                 '<div class="card my-3" id="movieCard' + i + '" onmouseenter="applyActivityHoverEffect(' + i + ')" onmouseleave="removeMovieHoverEffect(' + i + ')">' +
                 '<img id="actPics' + i + '" src="' + activityPics[i] + '" class="card-img-top" alt="' + activity[i] + '">' +
-                '<div class="card-body" id="actTitle' + i + '" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black; opacity: 0; transition: opacity 0.3s ease; font-family: \'DM Serif Text\', serif; font-style: italic; text-align: center;">' +
+                '<div class="card-body" id="actTitle' + i + '" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: Orange; opacity: 0; transition: opacity 0.3s ease; font-family: \'DM Serif Text\', serif; font-style: italic; text-align: center;">' +
 
                 '<h5 class="card-title">' + activity[i] + '</h5>' +
                 '</div>' +
@@ -88,26 +88,29 @@
                 '</a>' +
                 '</div>';
         }
-    
+
         function applyActivityHoverEffect(index) {
             var img = document.getElementById('actPics' + index);
             var title = document.getElementById('actTitle' + index);
-    
-            img.style.filter = "blur(4px) grayscale(100%)";
-            img.style.transition = "filter 0.3s ease";
-    
+
+            img.style.transform = "scale(1.1)";
+            img.style.filter = "blur(1px)";
+            img.style.transition = "transform 0.3s ease, filter 0.3s ease";
+
             title.style.opacity = 1;
         }
-    
+
         function removeMovieHoverEffect(index) {
             var img = document.getElementById('actPics' + index);
             var title = document.getElementById('actTitle' + index);
-    
+
+            img.style.transform = "scale(1)";
             img.style.filter = "none";
             title.style.opacity = 0;
         }
+
     </script>
-    
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -118,11 +121,11 @@
 
 <div class="container">
     <footer class="py-3 my-4">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item text-muted">For Educational Purposes Only</li>
-      </ul>
-      <p class="text-center text-muted">© 2024 CS</p>
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item text-muted">For Educational Purposes Only</li>
+        </ul>
+        <p class="text-center text-muted">© 2024 CS</p>
     </footer>
-  </div>
+</div>
 
 </html>
