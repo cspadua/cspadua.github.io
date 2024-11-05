@@ -1,150 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SONY WH-CH720N Wireless Headphones</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
 
+    <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #d9d9d9;
             color: #333;
         }
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #444;
-        }
-
-        .navbar .logo img {
-            width: 110px;
-        }
-
-        .navbar ul {
-            list-style-type: none;
-            display: flex;
-        }
-
-        .navbar ul li {
-            margin-left: 20px;
-        }
-
-        .navbar ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 1.1em;
+        .navbar-nav .nav-link {
             font-weight: 600;
-            transition: color 0.3s ease, background-color 0.3s ease;
-            padding: 5px 10px;
-            border-radius: 5px;
+            transition: color 0.3s;
         }
 
-        .navbar ul li a:hover {
+        .navbar-nav .nav-link:hover {
             color: black;
-            background-color: #f2f2f2;
-        }
-
-        .main-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 60px;
-            background-color: #fff;
-            margin: 20px auto;
-            max-width: 1200px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .product-image img {
-            width: 450px;
-            height: auto;
-            transition: transform 0.3s ease;
         }
 
         .product-image img:hover {
             transform: scale(1.1);
-        }
-
-        .product-details {
-            max-width: 500px;
-        }
-
-        .product-details h1 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            color: #222;
-        }
-
-        .product-details p {
-            font-size: 1.2em;
-            margin-bottom: 25px;
-            line-height: 1.5;
-            color: #555;
+            transition: transform 0.3s;
         }
 
         .buy-btn {
-            display: inline-block;
             background-color: #e60012;
             color: white;
-            padding: 15px 50px;
-            border-radius: 40px;
-            font-size: 1.2em;
+            padding: 10px 30px;
+            border-radius: 30px;
             font-weight: 600;
-            transition: background-color 0.3s ease;
             text-transform: uppercase;
             text-decoration: none;
+            transition: background-color 0.3s;
         }
 
         .buy-btn:hover {
             background-color: #cc0010;
-        }
-
-        .product-video {
-            margin-top: 40px;
-            text-align: center;
-        }
-
-        .product-video img {
-            width: 500px;
-            height: auto;
-        }
-
-        .features-section {
-            max-width: 1200px;
-            margin: 60px auto;
-            display: flex;
-            justify-content: space-around;
-            gap: 20px;
-            padding: 40px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature-box {
-            flex: 1;
-            text-align: center;
-        }
-
-        .feature-box h2 {
-            font-size: 1.8em;
-            color: #222;
-            margin-bottom: 10px;
-        }
-
-        .feature-box p {
-            font-size: 1.1em;
-            color: #555;
         }
 
         footer {
@@ -156,63 +54,101 @@
         }
 
         footer p {
-            font-size: 0.9em;
-            margin: 5px;
+            margin: 0;
         }
     </style>
 </head>
+
 <body>
-    
+
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="images/sonylogo.png" alt="Sony Logo">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #424240;">
+            <div class="container">
+                <a class="navbar-brand">
+                    <img id="logo" src="images/sonylogo.png" alt="logo" width="100">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link mx-4" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item mx-4">
+                            <a class="nav-link" href="#">Products</a>
+                        </li>
+                        <li class="nav-item mx-4">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item mx-4">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
         </nav>
     </header>
 
-    <section class="main-section">
-        <div class="product-image">
-            <img src="images/sonywh20n.png" alt="SONY WH-CH720N Headphones">
-        </div>
-        <div class="product-details">
-            <h1>SONY WH-CH720N</h1>
-            <p>Experience the incredible sound of Sony's WH-CH720N wireless noise-cancelling headphones, with professional-grade audio, crystal-clear quality, and up to 35 hours of battery life. Perfect for immersive listening and all-day comfort.</p>
-            <a href="#" class="buy-btn">Buy Now</a>
-        </div>
-    </section>
-
-    <section class="features-section">
-        <div class="feature-box">
-            <h2>Noise Cancelling</h2>
-            <p>Advanced noise-cancelling technology that adapts to your environment, providing you with an uninterrupted listening experience.</p>
-        </div>
-        <div class="feature-box">
-            <h2>35 Hours Battery Life</h2>
-            <p>Listen all day and beyond with a powerful battery life that lasts up to 35 hours on a single charge.</p>
-        </div>
-        <div class="feature-box">
-            <h2>Wireless Freedom</h2>
-            <p>Enjoy high-quality sound without the tangle of wires with seamless Bluetooth connectivity.</p>
+    <section class="container my-5 p-4 rounded-4 shadow" style="background-color: #dedede; color: #000;">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div class="product-image text-center">
+                    <img src="images/sonywh20n.png" alt="SONY WH-CH720N Headphones" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="product-details">
+                    <h1>SONY WH-CH720N</h1>
+                    <p>Experience the incredible sound of Sony's WH-CH720N wireless noise-cancelling headphones, with
+                        professional-grade audio, crystal-clear quality, and up to 35 hours of battery life. Perfect for
+                        immersive listening and all-day comfort.</p>
+                    <a href="https://shopee.ph/Sony-WH-CH720N-WH-CH720N-Wireless-Noise-Cancelling-Bluetooth-Headphones-i.325307811.22626690488"
+                        class="buy-btn">Buy Now</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="product-video">
+    <section class="container my-5 p-4 rounded-4 shadow" style="background-color: #dedede; color: #000;">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h2>Noise Cancelling</h2>
+                <p>Advanced noise-cancelling technology that adapts to your environment, providing you with an
+                    uninterrupted listening experience.</p>
+            </div>
+            <div class="col-md-4">
+                <h2>35 Hours Battery Life</h2>
+                <p>Listen all day and beyond with a powerful battery life that lasts up to 35 hours on a single charge.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h2>Wireless Freedom</h2>
+                <p>Enjoy high-quality sound without the tangle of wires with seamless Bluetooth connectivity.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5 text-center">
         <h2>Watch the Product Video</h2>
-        <a href="https://www.youtube.com/watch?v=jJkPHMSAtlA" target="_blank">
-            <img src="images/sonyvideo.png" alt="Sony Product Video">
-        </a>
+        <div>
+            <iframe width="400" height="300" src="https://www.youtube.com/embed/JJPXt2qawG4?si=WtKSZbrtYPllI8qY"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Sony Corporation. All rights reserved.</p>
         <p>Terms of Service | Privacy Policy | Contact Us</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+
 </body>
+
 </html>
