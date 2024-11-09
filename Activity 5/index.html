@@ -1,215 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PILIPINAS Mayon Volcano</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PILIPINAS〡Mayon Volcano</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" href="images/icon.png">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #333;
-            color: white;
+        .content-box:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
         }
 
-        header {
-            position: relative;
-            height: 100vh;
-            background-image: url('images/mt-mayon.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            animation: fadeIn 1.5s ease-in;
-        }
-
-        header img {
-            position: absolute;
-            top: -140px;
-            left: -120px;
-            height: 350px; 
-            width: auto;   
-        }
-
-        nav {
-            position: absolute;
-            top: 33px;
-            right: 20px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #ffcc00;
-        }
-
-        h1 {
-            font-size: 4rem;
-            margin: 10;
-            margin-top: 200px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 300;
-            margin-top: 50px;
-        }
-
-        p.intro {
-            font-size: 1.2rem;
-            margin-top: 10px;
-            text-align: center;
-            max-width: 1000px;
-        }
-
-        section {
-            padding: 40px 20px;
-            margin-top: -33px;
-            background-color: rgb(0, 0, 0);
-            text-align: center;
-        }
-
-        .info-container {
-            display: flex;
-            justify-content: space-between; 
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-
-        .info-box {
-            background-color: #444;
-            border-radius: 8px;
-            width: calc(27% - 0px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin: 10px;
-            padding: 20px;
-            color: white;
-            transition: transform 0.3s;
-        }
-
-        .info-box:hover {
-            transform: translateY(-5px); 
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
-        }
-
-        .info-box h4 {
-            margin: 0;
-        }
-
-        .info-box img {
-            width: 90%; 
-            height: 250px; 
-            object-fit: cover; 
-            margin-top: 10px; 
-            border-radius: 8px; 
-            transition: transform 0.3s; 
-        }
-
-        .info-box img:hover {
-            transform: scale(1.05); 
-        }
-
-        footer {
-            padding: 20px;
-            background-color: #252424;
-            text-align: center;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 1rem;
-        }
-
-        .ph-image {
-            width: 100%; 
-            height: auto; 
-            margin-top: 30px; 
-            display: block; 
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Media queries for responsive text */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 3rem; 
-            }
-            h2 {
-                font-size: 1.2rem; 
-            }
-            p.intro {
-                font-size: 1rem; /* Smaller font size on mobile */
-            }
-            .info-box {
-                width: calc(100% - 20px); /* Full width for small screens */
-                margin-bottom: 20px; /* Space between info boxes */
-            }
+        .content-box img:hover {
+            opacity: 0.8;
+            transition: opacity 0.3s ease-in-out;
         }
     </style>
 </head>
-<body>
 
-    <header>
-        <img src="images/logo.png" alt="Logo">
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Products</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+<body data-bs-theme="dark" id="body">
+
+    <div
+        style="background-image: url('images/mt-mayon.jpg'); background-size: cover; background-position: center; height: 100vh;">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container d-flex">
+                <a class="navbar-brand">
+                    <img id="logo" src="images/logo.png" alt="logo" width="190" height="auto">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-4">
+                            <a class="nav-link text-white" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item mx-4">
+                            <a class="nav-link text-white" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item mx-4">
+                            <a class="nav-link text-white" href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <h1>Mayon Volcano</h1>
-        <h2>The Perfect Cone</h2>
-        <p class="intro">Mayon Volcano, located in the Bicol region of the Philippines, is renowned for its perfect cone shape and is one of the most active volcanoes in the country. Standing at 2,462 meters (8,077 feet), its stunning beauty attracts tourists and researchers alike. With over 50 recorded eruptions, Mayon has shaped both the landscape and the lives of surrounding communities, enriching the volcanic soil that supports local agriculture. Culturally significant to the Bicolano people, Mayon features prominently in local legends and festivals.</p>
-    </header>
 
-    <section>
-        <h3>About Mayon Volcano</h3>
-        <div class="info-container">
-            <div class="info-box">
-                <h4>Active Eruptions</h4>
-                <p>Mayon is one of the Philippines' most active volcanoes, having erupted over 50 times. Its eruptions are often characterized by lava flows and explosive activity.</p>
-                <img src="images/eruption.jpg" alt="Active Eruptions">
-            </div>
-            <div class="info-box">
-                <h4>Tourist Attraction</h4>
-                <p>With its stunning symmetrical cone, Mayon attracts visitors for its breathtaking views and hiking opportunities, especially at the Mayon Volcano Natural Park.</p>
-                <img src="images/tower.jpg" alt="Tourist Attraction">
-            </div>
-            <div class="info-box">
-                <h4>Cultural Significance</h4>
-                <p>Mayon holds cultural significance for the local Bicolano people, featuring in many local legends and stories passed down through generations.</p>
-                <img src="images/festival.jpg" alt="Cultural Significance">
+        <div class="container text-center py-5 mt-5">
+            <div class="row my-3 justify-content-center">
+                <div class="col-12 col-md-8 col-lg-8 mb-5">
+                    <h1 class="display-3 text-white" style="font-weight: bold;">Mayon Volcano</h1>
+                    <h3 class="display-6 text-white" style="font-weight: 500;">The Perfect Cone</h3>
+                    <p class="lead text-white mt-3">Mayon Volcano, located in the Bicol region of the Philippines, is
+                        renowned for
+                        its perfect cone shape and is one of the most active volcanoes in the country. Standing at 2,462
+                        meters
+                        (8,077 feet),
+                        its stunning beauty attracts tourists and researchers alike. With over 50 recorded eruptions,
+                        Mayon
+                        has
+                        shaped both the landscape and the lives of surrounding communities, enriching the volcanic soil
+                        that
+                        supports local agriculture. Culturally significant to the Bicolano people, Mayon features
+                        prominently in
+                        local legends and festivals.</p>
+                </div>
             </div>
         </div>
-        <img src="images/ph.jpg" alt="Philippines" class="ph-image">
+    </div>
+
+    <section style="background-color: rgb(6, 0, 0); padding: 40px;">
+        <div class="text-center text-white mt-5 mb-4">
+            <h2>About Mayon Volcano</h2>
+        </div>
+        <div class="container">
+            <div class="row my-3">
+
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="content-box text-center">
+                        <div class="container rounded-4 p-4" style="background-color: rgb(46, 46, 46); color: white;">
+                            <h4>Active Eruptions</h4>
+                            <p>Mayon is one of the Philippines most active volcanoes, having erupted over 50 times. Its
+                                eruptions often characterized by lava flows and explosive activity.</p>
+                            <img src="images/eruption.png" alt="Eruption" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="content-box text-center">
+                        <div class="container rounded-4 p-4" style="background-color: rgb(46, 46, 46); color: white;">
+                            <h4>Tourist Attraction</h4>
+                            <p>With its stunning symmetrical cone, Mayon attracts visitors for its breathtaking views
+                                and hiking opportunities, especially at the Mayon Volcano Natural Park.</p>
+                            <img src="images/tower.png" alt="Tourist Attraction" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="content-box text-center">
+                        <div class="container rounded-4 p-4" style="background-color: rgb(46, 46, 46); color: white;">
+                            <h4>Cultural Significance</h4>
+                            <p>
+                                Mayon holds immense cultural significance for the local Bicolano people, featuring in
+                                many local legends and stories passed down through generations.</p>
+                            <img src="images/festival.png" alt="Festival" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>© 2024 PILIPINAS. All Rights Reserved.</p>
-    </footer>
+    <div>
+        <img src="images/ph.png" class="img-fluid">
+    </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <div class="container-fluid m-0" style="background-color: rgb(7, 0, 0);">
+        <footer class="text-center p-2">
+            <p class="m-0">© 2024 PILIPINAS. All Rights Reserved.</p>
+            <p class="m-0">For educational purposes only.</p>
+        </footer>
+    </div>
 </body>
+
 </html>
