@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'Maleo Trials Black';
+    src: url('fonts/MaleoTrials-Black-BF65a5f4e6d9981.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: #171717;
+}
+
+#logo {
+    width: 110px;
+    height: auto;
+}
+
+#button1 {
+    background-color: #FFFFFF;
+    color: #171717;
+    font-size: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: none;
+}
+
+#button1:hover {
+    background-color: #6e6e6e;
+}
+
+#iframe1 {
+    pointer-events: none; 
+    margin-left: 50%; 
+    transform: translateX(-50%); 
+    width: 4000px;
+    height: 100%;
+}
+
+a {
+    text-decoration: none; 
+    outline: none;
+}
+
+a:focus, a:hover {
+    outline: none;
+}
+
+.filter {
+    position: absolute; 
+    top: 0px; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.452);
+}
+
+#frametxt {
+    color: #FFFFFF;
+    font-size: 13px;
+
+}
+
+#applelogo, #gplaylogo {
+    transition: transform 0.3s ease;
+}
+
+#applelogo:hover, #gplaylogo:hover {
+    transform: scale(1.1);
+}
+
+#applelogo, #gplaylogo {
+    transition: transform 0.3s ease; 
+}
+
+#applelogo:hover, #gplaylogo:hover {
+    transform: scale(1.1); 
+}
+
+#imgone, #imgtwo, #imgthree {
+    transition: transform 0.3s ease-in-out;
+}
+
+#imgone:hover, #imgtwo:hover, #imgthree:hover {
+    transform: scale(1.1); 
+}
+
+h1 {
+    font-family: 'Maleo Trials Black', sans-serif;
+    font-size: 96px;
+}
+
+section h3 {
+    font-size: 18px;
+}
+
+.bg-cover {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#button2 {
+    background-color: #6A58FF;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px; 
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+#button2:hover {
+    background-color: #5741D9;
+}
+
+footer {
+    background-color: #171717;
+}
+
+#flogo {
+    height: 30px;
+    width: auto;
+}
+
+#txt1 {
+    color: #696E69;
+    font-size: 13px;
+}
+
+#txt2 {
+    color: #D6D6D6;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
