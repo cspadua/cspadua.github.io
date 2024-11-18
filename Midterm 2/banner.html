@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="parallax.css" />
-    <link rel="stylesheet" href="styles.css" />
     <title>Adventure Time</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -33,68 +32,150 @@
 
 
     <section class="main-content">
-        <div style="height: auto; background-color: #ECE8E1;">
+        <div style="height: auto; background-color: #BDAC50;">
 
-            <div class="container d-flex align-items-center justify-content-center">
-                <div class="row p-5 d-flex align-items-center justify-content-center" id="char" data-aos="fade-up">
-                    <div class="section-desc col-lg-6 d-flex flex-column justify-content-center text-center">
-                        <h1>MEET THE CHARACTERS</h1>
-                        <h4>DISCOVER EACH CHARACTER’S UNIQUE PERSONALITY</h4>
-                        <p>Explore all your favorite Adventure Time characters! Get to know their quirky personalities,
-                            special powers, and unforgettable stories in the Land of Ooo.</p>
-                        <a href="characterList.html"><button class="btn btn-primary">VIEW ALL CHARACTERS</button></a>
+            <div class="container-fluid p-5 d-flex flex-column align-items-center justify-content-center">
+                <div class=" mb-3 ratio ratio-16x9" style="max-width: 90%;">
+                    <iframe src="https://www.youtube.com/embed/v_am43iRm-A?si=CtmjdWVIews18dJf"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="text-center" id="extras">TRAILERS & EXTRAS</p>
+                <h1 class="mb-3 text-center" id="openingtheme">ADVENTURE TIME │ OPENING THEME</h1>
+            </div>
+
+            <div class="container-fluid p-5 d-flex align-items-center justify-content-center"
+                style="background-color: #292929;">
+                <img src="images/advlogo.png" class="img-fluid" style="width: 350px; height: auto;">
+            </div>
+
+            <div class="container p-5 shadow-lg mt-5 rounded-3" style="background-color: #BDAC50;" data-aos="fade-up">
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="section-desc col-lg-6 d-flex flex-column justify-content-center">
+                        <h1 id="overview">OVERVIEW</h1>
+                        <p id="overview-p">Adventure Time is an iconic animated series created by Pendleton Ward,
+                            blending humor, heart, and surreal storytelling into a fantastical world like no other. The
+                            show follows the adventures of Finn the Human, a brave and kind-hearted teenager, and his
+                            best friend and adoptive brother, Jake the Dog, a magical, shape-shifting canine with a
+                            laid-back attitude.
+                            Together, Finn and Jake explore the magical and post-apocalyptic Land of Ooo, filled with
+                            bizarre landscapes, quirky characters, and mysteries that deepen as the series unfolds. From
+                            the towering Candy Kingdom to the eerie Ice Kingdom, every corner of Ooo is bursting with
+                            color, magic, and adventure.</p>
+
+                        <div class="container d-flex justify-content-start align-items-start text-start p-0 gap-5 mb-4">
+
+                            <div class="d-flex flex-column">
+                                <p class="mb-0" id="top"><strong>DIRECTED BY</strong></p>
+                                <p class="mb-0" id="bot">Pendleton Ward</p>
+                            </div>
+
+                            <div class="d-flex flex-column">
+                                <p class="mb-0" id="top"><strong>WRITTEN BY</strong></p>
+                                <p class="mb-0" id="bot">Rebecca Sugar,</p>
+                                <p class="mb-0" id="bot">Adam Muto</p>
+                            </div>
+
+                            <div class="d-flex flex-column">
+                                <p class="mb-0" id="top"><strong>RATING</strong></p>
+                                <p class="mb-0" id="bot">TV-PG</p>
+                            </div>
+
+                            <div class="d-flex flex-column">
+                                <p class="mb-0" id="top"><strong>RELEASE DATE</strong></p>
+                                <p class="mb-0" id="bot">June 20, 2018</p>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="col-lg-6 d-flex justify-content-center" id="charimg">
-                        <img src="images/chr/finn.png" class="img-fluid">
+
+                    <div class="col-lg-6 d-flex justify-content-center p-0">
+                        <img src="images/poster.png" class="img-fluid rounded shadow" id="poster">
                     </div>
                 </div>
             </div>
 
-            <div class="container-fluid shadow-lg" id="map" style="background-color: #1D73AD;">
-                <div class="row p-5 d-flex align-items-center justify-content-center" data-aos="fade-up">
-                    <div class="col-lg-6 d-flex justify-content-center" id="mapimg">
-                        <img src="images/map/map.png" class="img-fluid">
+            <div class="container d-flex align-items-center justify-content-center mt-5">
+                <div class="row p-5 d-flex align-items-center justify-content-center gap-5" data-aos="fade-up">
+
+                    <div class="col-lg-6 d-flex justify-content-center mb-4" id="charimg">
+                        <img src="images/chr/finn.png" class="img-fluid">
                     </div>
-                    <div class="section-desc col-lg-6 d-flex flex-column justify-content-center text-center">
-                        <h1>DIVE IN THE LAND OF Ooo</h1>
-                        <h4>FIND YOUR WAY THROUGH EVERY CORNER</h4>
-                        <p>Discover the vast and colorful world of Adventure Time! From the Candy Kingdom to the Fire
+
+                    <div class="section-desc col-lg-6 d-flex flex-column justify-content-center">
+                        <h1 id="h-1">MEET THE CHARACTERS</h1>
+                        <h4 id="h-4">DISCOVER EACH CHARACTER’S UNIQUE PERSONALITY</h4>
+                        <p id="p-1">Explore all your favorite Adventure Time characters! Get to know their quirky
+                            personalities,
+                            special powers, and unforgettable stories in the Land of Ooo.</p>
+                        <a href="https://adventuretime.fandom.com/wiki/Category:Characters"><button class="btn btn-primary" id="button">VIEW ALL
+                                CHARACTERS</button></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container-fluid shadow-lg" style="background-color: #3a6a9b;">
+                <div class="row p-5 d-flex align-items-center justify-content-center" data-aos="fade-up">
+
+                    <div class="section-desc col-lg-6 d-flex flex-column justify-content-center mb-4">
+                        <h1 id="h-1b">DIVE IN THE LAND OF Ooo</h1>
+                        <h4 id="h-4b">FIND YOUR WAY THROUGH EVERY CORNER</h4>
+                        <p id="p-1b">Discover the vast and colorful world of Adventure Time! From the Candy Kingdom to
+                            the Fire
                             Kingdom, explore every unique location, uncover hidden secrets, and meet memorable friends
                             along the way.</p>
-                        <a href="characterList.html"><button class="btn btn-primary">VIEW ALL LOCATIONS</button></a>
+                        <a href="https://adventuretime.fandom.com/wiki/Category:Places"><button class="btn btn-primary" id="button">VIEW ALL
+                                LOCATIONS</button></a>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-center" id="mapimg">
+                        <img src="images/map/map.png" class="img-fluid">
                     </div>
                 </div>
             </div>
 
             <div class="container d-flex align-items-center justify-content-center" data-aos="fade-up">
-                <div class="row p-5 d-flex align-items-center justify-content-center" id="episode">
-                    <div class="section-desc col-lg-6 d-flex flex-column justify-content-center text-center">
-                        <h1>EXPLORE THE EPISODES</h1>
-                        <h4>DISCOVER EVERY ADVENTURE</h4>
-                        <p>Embark on a journey through the whimsical and thrilling episodes of Adventure Time! Dive into
+                <div class="row p-5 d-flex align-items-center justify-content-center gap-5" id="episode">
+
+                    <div class="col-lg-6 d-flex justify-content-center mb-4" id="episodeimg">
+                        <img src="images/chr/fnnjake.png" class="img-fluid">
+                    </div>
+                    <div class="section-desc col-lg-6 d-flex flex-column justify-content-center">
+                        <h1 id="h-1">EXPLORE EVERY EPISODES</h1>
+                        <h4 id="h-4">DISCOVER EVERY ADVENTURE</h4>
+                        <p id="p-1">Embark on a journey through the whimsical and thrilling episodes of Adventure Time!
+                            Dive into
                             each episode’s storyline, meet the characters, and uncover the magical events in the Land of
                             Ooo.</p>
-                        <a href="episodeList.html"><button class="btn btn-primary">VIEW ALL EPISODES</button></a>
-                    </div>
-                    <div class="col-lg-6 d-flex justify-content-center" id="episodeimg">
-                        <img src="images/chr/fnnjake.png" class="img-fluid">
+                        <a href="https://trakt.tv/shows/adventure-time/seasons/all"><button class="btn btn-primary" id="button">VIEW ALL
+                                EPISODES</button></a>
                     </div>
                 </div>
             </div>
 
-            <footer>
-                <div class="Footer">
-                    <h4>Adventure Time | Cartoon Netwrok</h4>
-                </div>
-                <div class="extLinksContainer">
-                    <div class="flogo1" id="flogo1">
-                        <a href="#"><img src="images/advt.png"></a>
+            <footer class="text-center py-5">
+                <div class="container">
+                    <div class="flogo mb-3 ">
+                        <img src="images/advlogo.png" class="img-fluid" id="flogo">
+                        <img src="images/cn.png" class="img-fluid" id="flogo">
                     </div>
-                    <div class="flogo2" id="flogo2">
-                        <a href="#"><img src="images/cn.png"></a>
+                    <div class="footer-text mb-1" id="txt1">
+                        <p>© 2024 Cartoon Network. Adventure Time and all related logos, characters, names, and
+                            distinctive likenesses <br>are the exclusive property of Cartoon Network and Pendleton Ward.
+                            All
+                            rights reserved.</p>
+
+                    </div>
+                    <div class="footer-links d-flex justify-content-center gap-4" id="txt2">
+                        <h2 class="h6 m-0">PRIVACY NOTICE</h2>
+                        <h2 class="h6 m-0">TERMS OF SERVICE</h2>
+                        <h2 class="h6 m-0">COOKIE PREFERENCES</h2>
                     </div>
                 </div>
             </footer>
+
         </div>
     </section>
 
