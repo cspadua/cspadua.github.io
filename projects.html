@@ -67,6 +67,27 @@
             color: #07149c;
         }
 
+        .dropdown-menu {
+            background-color: #FAF7EE !important;
+            border: 1px solid #000;
+        }
+
+        .dropdown-item {
+            color: #000000 !important;
+            background-color: transparent !important;
+        }
+
+        .dropdown-item:hover,
+        .dropdown-item:focus {
+            color: #07149c !important;
+            background-color: transparent !important;
+        }
+
+        .nav-link.dropdown-toggle.show {
+            color: #000000 !important;
+            background-color: transparent !important;
+        }
+
         .navbar-toggler-icon {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='black' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
         }
@@ -74,7 +95,9 @@
 </head>
 
 <body data-bs-theme="dark" id="body">
-    <nav class="navbar navbar-expand-lg" style="background-color: #FAF7EE; border-bottom: 1px solid #000;">
+
+    <nav class="navbar navbar-expand-lg"
+        style="background-color: #FAF7EE; color:#000000; border-bottom: 1px solid #000;">
         <div class="container d-flex">
             <a class="navbar-brand">
                 <img id="logo" src="images/logo.png" alt="logo" width="100" height="auto">
@@ -83,13 +106,21 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
                     <li class="nav-item mx-4">
                         <a class="nav-link" aria-current="page" href="index.html">Home</a>
                     </li>
-                    <li class="nav-item mx-4">
-                        <a class="nav-link" href="projects.html">Projects</a>
+                    <li class="nav-item mx-4 position-relative">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" style="color: #000000 !important;">
+                            Projects
+                        </a>
+                        <ul class="dropdown-menu text-center" aria-labelledby="navbarDropdown"
+                            style="font-size: 1rem; font-family: 'DM Serif Text', serif; left: 50%; transform: translateX(-50%);">
+                            <li><a class="dropdown-item" href="projects.html#wDev">Web Dev.</a></li>
+                            <li><a class="dropdown-item" href="projects.html#aDev">App Dev.</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item mx-4">
                         <a class="nav-link" href="#">Contact</a>
@@ -104,14 +135,25 @@
         <h3 class="my-projects">to my projects</h3>
     </section>
 
-    <div class="my-3">
-        <h1 class="projects">projects &lt;ol&gt;</h1>
+    <div id="wDev" class="my-3">
+        <h1 class="projects">W.dev projects &lt;ol&gt;</h1>
         <h3 class="click-to-see-more">click to see more details</h3>
     </div>
 
     <div class="container text-center">
 
         <div class="row justify-content-center" style="max-width: 90%; margin: 0 auto;" id="activityContainer">
+        </div>
+    </div>
+
+    <div id="aDev" class="my-3">
+        <h1 class="projects">A.dev projects &lt;ol&gt;</h1>
+        <h3 class="click-to-see-more">click to see more details</h3>
+    </div>
+
+    <div class="container text-center">
+
+        <div class="row justify-content-center" style="max-width: 90%; margin: 0 auto;" id="aDevActivityContainer">
         </div>
     </div>
 
@@ -177,6 +219,69 @@
         }
 
     </script>
+
+    <!-- <script>
+        var activity = [
+            "Activity 4",
+            "Activity 5",
+            "Activity 6",
+            "Activity 7",
+            "Midterm 1",
+            "Midterm 2"
+        ];
+
+        var activityPics = [
+            "images/activity4.png",
+            "images/activity5.png",
+            "images/activity6.png",
+            "images/activity7.png",
+            "images/midterm1.png",
+            "images/midterm2.png"
+        ];
+
+        var activityLinks = [
+            "Activity 4/index.html",
+            "Activity 5/index.html",
+            "Activity 6/index.html",
+            "Activity 7/index.html",
+            "Midterm 1/index.html",
+            "Midterm 2/banner.html"
+        ];
+
+        var aDevActivityContainer = document.getElementById("aDevActivityContainer");
+        for (var i = 0; i < activity.length; i++) {
+            aDevActivityContainer.innerHTML +=
+                '<div class="col-12 col-md-6 col-lg-4 col-xl-3">' +
+                '<a href="' + activityLinks[i] + '" style="text-decoration: none; color: inherit;">' +
+                '<div class="card my-3" id="movieCard' + i + '" onmouseenter="applyActivityHoverEffect(' + i + ')" onmouseleave="removeActivityHoverEffect(' + i + ')">' +
+                '<img id="actPics' + i + '" src="' + activityPics[i] + '" class="card-img-top" alt="' + activity[i] + '">' +
+                '<div class="card-body" id="actTitle' + i + '" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: Orange; opacity: 0; transition: opacity 0.3s ease; font-family: \'DM Serif Text\', serif; font-style: italic; text-align: center;">' +
+
+                '<h5 class="card-title">' + activity[i] + '</h5>' +
+                '</div>' +
+                '</div>' +
+                '</a>' +
+                '</div>';
+        }
+
+        function applyActivityHoverEffect(index) {
+            var img = document.getElementById('actPics' + index);
+            var title = document.getElementById('actTitle' + index);
+
+            img.style.transform = "scale(1.1)";
+
+            title.style.opacity = 1;
+        }
+
+        function removeActivityHoverEffect(index) {
+            var img = document.getElementById('actPics' + index);
+            var title = document.getElementById('actTitle' + index);
+
+            img.style.transform = "scale(1)";
+            title.style.opacity = 0;
+        }
+
+    </script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
