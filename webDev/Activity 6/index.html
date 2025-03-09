@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="icon" href="images/icon.png">
+</head>
+
+<body data-bs-theme="light" id="body">
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="#">
+        <img id="logo" src="images/logo-dark.png" alt="logo" width="80" height="auto">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://cspadua.github.io/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Social Media
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="https://www.instagram.com/c__l._.03/" target="_blank">
+                  <img src="images/instagram.png" alt="Instagram" width="20" height="20" class="me-2"> Instagram
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="https://www.facebook.com/Naieonnnn" target="_blank">
+                  <img src="images/facebook.png" alt="Facebook" width="20" height="20" class="me-2"> Facebook
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-outline-secondary ms-3" id="btnColor" onclick="changeColorMode()">Dark Mode</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <img src="images/landing-image.png" class="img-fluid" alt="welcome">
+
+  <div class="container">
+    <div class="row my-5">
+      <h1 class="display-3 pt-5">Favorite Movies & Series</h1>
+      <hr class="custom-line">
+    </div>
+    <div class="row my-5" id="movieContainer"></div>
+  </div>
+
+  <div class="container">
+    <div class="row my-5">
+      <h2 class="display-3 pt-5">Favorite Music</h2>
+      <hr class="custom-line">
+    </div>
+    <div class="row my-5" id="musicContainer"></div>
+  </div>
+
+  <div class="container">
+    <div class="row my-5">
+      <h3 class="display-3 pt-5">Favorite Moments With Her</h3>
+      <hr class="custom-line">
+    </div>
+    <div class="row my-5" id="gwenContainer"></div>
+  </div>
+
+  <script>
+    var movieNames = [
+      "Fight Club",
+      "Better Call Saul",
+      "End of the F***ing World",
+      "Eternal Sunshine on Spotless Mind",
+      "Hunger Games",
+      "Normal People",
+      "Twilight",
+      "Seven"
+    ];
+
+    var moviePics = [
+      "images/movies/fight-club.png",
+      "images/movies/better-call-saul.png",
+      "images/movies/end-of-the-fucking-world.png",
+      "images/movies/eternal-sunshine.png",
+      "images/movies/hunger-games.png",
+      "images/movies/normal-people.png",
+      "images/movies/twilight.png",
+      "images/movies/seven.png"
+    ];
+
+    var movieContainer = document.getElementById("movieContainer");
+    for (var i = 0; i < movieNames.length; i++) {
+      movieContainer.innerHTML +=
+        '<div class="col-12 col-md-6 col-lg-4 col-xl-3">' +
+        '<div class="card my-3" id="movieCard' + i + '" onmouseenter="applyMovieHoverEffect(' + i + ')" onmouseleave="removeMovieHoverEffect(' + i + ')">' +
+        '<img id="movieImg' + i + '" src="' + moviePics[i] + '" class="card-img-top" alt="' + movieNames[i] + '">' +
+        '<div class="card-body" id="movieTitle' + i + '" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; opacity: 0; transition: opacity 0.3s ease; text-align: center;">' +
+        '<h5 class="card-title">' + movieNames[i] + '</h5>' +
+        '</div>' +
+        '</div>' +
+        '</div>';
+    }
+
+    function applyMovieHoverEffect(index) {
+      var img = document.getElementById('movieImg' + index);
+      var title = document.getElementById('movieTitle' + index);
+
+      img.style.filter = "blur(5px) grayscale(100%)";
+      img.style.transition = "filter 0.3s ease";
+
+      title.style.opacity = 1;
+    }
+
+    function removeMovieHoverEffect(index) {
+      var img = document.getElementById('movieImg' + index);
+      var title = document.getElementById('movieTitle' + index);
+
+      img.style.filter = "none";
+      title.style.opacity = 0;
+    }
+  </script>
+
+  <script>
+    var musicNames = [
+      "Cigarettes out the Window",
+      "Cool About It",
+      "Curl up & Die",
+      "Jigsaw Falling Into Place",
+      "Moonlight on the River",
+      "Things to Do",
+      "Waiting Room",
+      "Where Is My Mind?"
+    ];
+
+    var musicPics = [
+      "images/music/cigg-window.png",
+      "images/music/cool-about-it.png",
+      "images/music/curl-up-die.png",
+      "images/music/jigsaw.png",
+      "images/music/moonlight.png",
+      "images/music/things.png",
+      "images/music/waiting-room.png",
+      "images/music/where.png"
+    ];
+
+    var musicContainer = document.getElementById("musicContainer");
+    for (var i = 0; i < musicNames.length; i++) {
+      musicContainer.innerHTML +=
+        '<div class="col-12 col-md-6 col-lg-4 col-xl-3">' +
+        '<div class="card my-3" id="musicCard' + i + '" onmouseenter="applyMusicHoverEffect(' + i + ')" onmouseleave="removeMusicHoverEffect(' + i + ')">' +
+        '<img id="musicImg' + i + '" src="' + musicPics[i] + '" class="card-img-top" alt="' + musicNames[i] + '">' +
+        '<div class="card-body" id="musicTitle' + i + '" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; opacity: 0; transition: opacity 0.3s ease; text-align: center;">' +
+        '<h5 class="card-title">' + musicNames[i] + '</h5>' +
+        '</div>' +
+        '</div>' +
+        '</div>';
+    }
+
+    function applyMusicHoverEffect(index) {
+      var img = document.getElementById('musicImg' + index);
+      var title = document.getElementById('musicTitle' + index);
+
+      img.style.filter = "blur(5px) grayscale(100%)";
+      img.style.transition = "filter 0.3s ease";
+
+      title.style.opacity = 1;
+    }
+
+    function removeMusicHoverEffect(index) {
+      var img = document.getElementById('musicImg' + index);
+      var title = document.getElementById('musicTitle' + index);
+
+      img.style.filter = "none";
+      title.style.opacity = 0;
+    }
+  </script>
+
+  <script>
+    var gwenNames = [
+      "I",
+      "LOVE",
+      "U",
+      "SO",
+      "MUCH",
+      "MYCA",
+      "GWEN",
+      "MUNCAL"
+    ];
+
+    var gwenPics = [
+      "images/gwen/anniv.png",
+      "images/gwen/coffee.png",
+      "images/gwen/elcuartel.png",
+      "images/gwen/kuyaj.png",
+      "images/gwen/losban.png",
+      "images/gwen/school.png",
+      "images/gwen/second-anniv.png",
+      "images/gwen/stotomas.png"
+    ];
+
+    var gwenContainer = document.getElementById("gwenContainer");
+    for (var i = 0; i < gwenNames.length; i++) {
+      gwenContainer.innerHTML +=
+        '<div class="col-12 col-md-6 col-lg-4 col-xl-3">' +
+        '<div class="card my-3" id="gwenCard' + i + '" onmouseenter="applyHoverEffect(' + i + ')" onmouseleave="removeHoverEffect(' + i + ')">' +
+        '<img id="gwenImg' + i + '" src="' + gwenPics[i] + '" class="card-img-top" alt="' + gwenNames[i] + '">' +
+        '<div class="card-body" id="gwenTitle' + i + '" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; opacity: 0; transition: opacity 0.3s ease; text-align: center;">' +
+        '<h5 class="card-title">' + gwenNames[i] + '</h5>' +
+        '</div>' +
+        '</div>' +
+        '</div>';
+    }
+
+    function applyHoverEffect(index) {
+      var img = document.getElementById('gwenImg' + index);
+      var title = document.getElementById('gwenTitle' + index);
+
+      img.style.filter = "blur(5px) grayscale(100%)";
+      img.style.transition = "filter 0.3s ease";
+
+      title.style.opacity = 1;
+    }
+
+    function removeHoverEffect(index) {
+      var img = document.getElementById('gwenImg' + index);
+      var title = document.getElementById('gwenTitle' + index);
+
+      img.style.filter = "none";
+
+      title.style.opacity = 0;
+    }
+  </script>
+
+  <script>
+    var colorMode = "light";
+    function changeColorMode() {
+      if (colorMode == "light") {
+        document.getElementById("body").setAttribute("data-bs-theme", "dark");
+        document.getElementById("btnColor").innerHTML = "Light Mode";
+        document.getElementById("logo").src = "images/logo.png";
+        colorMode = "dark";
+      } else {
+        document.getElementById("body").setAttribute("data-bs-theme", "light");
+        document.getElementById("btnColor").innerHTML = "Dark Mode";
+        document.getElementById("logo").src = "images/logo-dark.png";
+        colorMode = "light";
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+      </ul>
+      <p class="text-center text-muted">© 2024 CS, Inc</p>
+    </footer>
+  </div>
+</body>
+
+</html>
