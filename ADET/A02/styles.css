@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Surt&display=swap');
+
+.navbar-nav .nav-item .nav-link {
+  font-family: 'Surt', sans-serif !important;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1E3930 !important;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  text-decoration: underline !important;
+  text-decoration-color: black !important;
+}
+
+#iframe1 {
+  pointer-events: none; 
+  margin-left: 50%; 
+  transform: translateX(-50%); 
+  width: 4000px;
+  height: 100%;
+}
+
+.filter {
+  position: absolute; 
+  top: 0px; 
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.452);
+}
+
+h1 {
+  font-family: 'Surt', sans-serif;
+  font-size: 60px;
+  color: #393334;
+  font-weight: 600;
+}
+
+h4 {
+  font-family: 'Surt', sans-serif;
+  font-size: 16px;
+  color: #393334;
+  font-weight: 500;
+}
+
+hr {
+  height: .5px; 
+  background-color: grey; 
+  opacity: 1; 
+  margin: 0 auto; 
+  width: 90%
+}
+
+
+.card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #E8E8E4 !important;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+.card-img-top {
+  height: 200px;
+  object-fit: contain;
+  padding: 1rem;
+}
+
+
+.card-title {
+  font-family: 'Surt', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+  color: #000;
+}
+
+
+.card-body h6.text-muted {
+  font-family: 'Surt', sans-serif;
+  font-size: 12px;
+  text-align: center;
+  color: #000 !important;
+}
+
+
+.card-text {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+}
+
+
+.btn-dark {
+  background-color: white;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: #000;
+  font-family: 'Surt', sans-serif;
+  font-size: 18px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 12px; 
+}
+
+.btn-dark:hover {
+  transform: scale(1.05);
+}
+
+h5 {
+  font-family: 'Surt', sans-serif;
+  font-size: 13px;
+  color: #352b27;
+}
+
+p {
+  font-family: 'Surt', sans-serif;
+  font-size: 13px;
+  color: #352b27;
+}
+
+#refreshers {
+  scroll-margin-top: 100px !important;
+}
+
+#bakery {
+  scroll-margin-top: 100px !important;
+}
+
+#coldbrew {
+  scroll-margin-top: 100px !important;
+}
+
+#desserts {
+  scroll-margin-top: 100px !important;
+}
+
+.footer-links {
+  color: #1E3930;
+  font-family: 'Surt', sans-serif;
+}
