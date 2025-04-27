@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akshar&display=swap');
+
+#index {
+  background-color: #000;
+  height: 2330px;
+}
+
+@media (max-width: 991.98px) {
+  #index {
+    height: 2400px;
+  }
+}
+
+nav {
+  background-color: #E1D8C6;
+}
+
+.navbar-brand {
+  color: #000;
+  font-weight: 500;
+  font-family: 'Koulen', sans-serif;
+  font-size: 8vw;
+}
+
+@media (min-width: 992px) {
+  .navbar-brand {
+    font-size: 100px;
+  }
+}
+
+.nav-link {
+  color: #000;
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+.nav-offset {
+  padding-top: 30px;
+}
+
+#faye2 {
+  height: 520px;
+  width: auto;
+  position: relative;
+  bottom: 80px;
+  left: 30px;
+  z-index: 1;
+}
+
+.text {
+  position: absolute;
+  top: 35%;
+  right: 22%;
+  transform: translateY(-50%);
+  color: #000;
+  z-index: 2;
+  font-size: clamp(2rem, 5vw, 5.5rem);
+
+}
+
+.awkward {
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 90px !important;
+
+}
+
+.h1 {
+  font-family: 'Koulen', sans-serif;
+  font-size: 80px;
+}
+
+
+#faye1 {
+
+  height: 600px;
+  width: auto;
+  position: relative;
+  bottom: 500px;
+  right: 41px;
+  z-index: 1;
+
+}
+
+#faye3 {
+  position: absolute;
+  bottom: 360px;
+  left: 200px;
+  height: 350px;
+  z-index: 2;
+}
+
+
+@media (max-width: 991.98px) {
+  #faye1 {
+    position: static;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto 1rem auto;
+    display: block;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #faye3 {
+    display: none;
+  }
+}
+
+header {
+  background-color: #E1D8C6;
+}
+
+
+
+.title {
+  font-family: 'Koulen', sans-serif;
+  color: #E1D8C6;
+  font-size: 80px;
+
+}
+
+.sub {
+  font-family: 'Aleo', serif;
+  color: #E1D8C6;
+  font-size: 30px;
+}
+
+.paragraph {
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 20px;
+  color: #E1D8C6;
+  text-align: justify;
+  max-width: 900px;
+  margin: 0 auto;
+
+}
+
+.text-decoration-underline {
+  font-family: 'Akshar', sans-serif;
+  color: #E1D8C6;
+  font-size: 20px;
+
+}
+
+.text-decoration-underline:hover {
+  color: #003b7b;
+  cursor: pointer;
+}
+
+.background-image {
+  background-image: url('img/faye4.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 550px;
+  width: 100%;
+}
+
+#content {
+
+  bottom: 300px;
+  z-index: 1;
+}
+
+
+@media (max-width: 991.98px) {
+  #content {
+    top: 0px;
+    z-index: 1;
+  }
+}
+
+
+footer {
+  background-color: #E1D8C6;
+}
+
+.footer-text {
+
+  color: #000;
+  font-family: 'Koulen', sans-serif;
+  font-size: 20px;
+}
+
+p,
+.footer-name {
+
+  color: #393939;
+  font-family: 'Koulen', sans-serif;
+  font-size: 15px;
+}
+
+/* album.html */
+
+#album {
+  background-color: #000;
+}
+
+.header-image {
+  background-image: url('img/album/header.jpg');
+  background-size: cover;
+  background-position: start;
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .header-image {
+    background-position: center;
+  }
+}
+
+.album-link {
+  display: inline-block;
+}
+
+.album-img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.album-link:hover .album-img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  cursor: pointer;
+}
+
+.custom-hr {
+  border: none;
+  border-top: 1px solid #E1D8C6 !important;
+  width: 95%;
+  margin: 0 auto;
+  opacity: 1;
+}
+
+#txt {
+
+  color: #E1D8C6;
+  font-family: 'Akshar', sans-serif;
+  font-size: 30px;
+}
+
+
+
+.song-img {
+  width: 80%;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 15px;
+}
+
+.song-img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+
+/* faye.html */
+
+#faye {
+  background-color: #E1D8C6;
+}
+
+#bento {
+  background-color: #003C7E;
+  border-radius: 30px;
+}
+
+#i-heart,
+#album-card,
+#followers-card {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#pic1-card,
+#pic2-card {
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#socials-card {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#disc-card {
+  min-height: 315px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#genre-card,
+#born-card {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #0B0B0B;
+  color: #ffffff;
+}
+
+#i-heart,
+#album-card,
+#followers-card,
+#lyrics-card,
+#pic1-card,
+#pic2-card,
+#socials-card,
+#disc-card {
+  padding: 15px;
+  border-radius: 20px;
+  background-color: #0B0B0B;
+  color: #ffffff;
+}
+
+#i-heart h1 {
+  font-size: 80px;
+  margin-right: 10px;
+  font-family: 'Aleo', serif;
+  font-weight: bolder;
+  line-height: 1;
+  display: inline-block;
+}
+
+#i-heart h2 {
+  font-size: 38px;
+  font-weight: bold;
+  font-family: 'Aleo', serif;
+}
+
+#i-heart img {
+  width: 90px;
+  height: 80px;
+  vertical-align: middle;
+}
+
+#album-card h1 {
+  font-size: 20px;
+  font-family: 'Aleo', serif;
+  font-weight: 500;
+}
+
+#album-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#album-images img {
+  width: 110px;
+  height: 110px;
+}
+
+.album-img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.album-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.year {
+  font-size: 16px;
+  font-family: 'Darker Grotesque', sans-serif;
+  margin-top: 5px;
+}
+
+#followers-card h1 {
+  font-size: 40px;
+  font-weight: bolder;
+  font-family: 'Aleo', serif;
+}
+
+.followers-label,
+.listeners-label {
+  font-size: 16px;
+  font-family: 'Darker Grotesque', sans-serif;
+}
+
+#genre-card h1,
+#born-card h1 {
+  font-size: 35px;
+  font-weight: 500;
+  font-family: 'Aleo', serif;
+}
+
+.genre-label,
+.born-label {
+  font-size: 16px;
+  font-family: 'Darker Grotesque', sans-serif;
+}
+
+#socials-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+#spotify,
+#youtube,
+#instagram {
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+#spotify {
+  width: 70px;
+  height: 70px;
+}
+
+#youtube {
+  width: 90px;
+  height: 90px;
+}
+
+#instagram {
+  width: 60px;
+  height: 60px;
+}
+
+.socials-icon {
+  transition: transform 0.3s ease;
+}
+
+.socials-icon:hover {
+  transform: scale(1.2);
+
+}
+
+#faye-footer {
+  background-color: #000000;
+}
+
+#faye-footer .footer-text {
+
+  color: #E1D8C6;
+  font-family: 'Koulen', sans-serif;
+  font-size: 20px;
+}
+
+.faye-footer-name {
+
+  color: #a99c82;
+  font-family: 'Koulen', sans-serif;
+  font-size: 15px;
+}
