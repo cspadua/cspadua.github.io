@@ -293,7 +293,7 @@ var products = [
       {
         "isAvailable": true,
         "name": "Tarte Au Chocolate",
-        "code": "PBC",
+        "code": "TAC",
         "contentImage": "img/tartImg/2.png",
         "price": 470
       },
