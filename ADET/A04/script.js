@@ -1,4 +1,3 @@
-
 var products = [
   {
     "category": "Espresso",
@@ -327,7 +326,7 @@ function loadCategories() {
   var categoriesContainer = document.getElementById("categories");
 
   products.forEach((product, index) => {
-  categoriesContainer.innerHTML += `
+    categoriesContainer.innerHTML += `
       <div onclick="loadProducts(` + index + `)" class="shadow-sm rounded-4 mx-1 custom-button p-3 text-center d-flex flex-column align-items-center justify-content-center">
         <img src="` + product.categoryImage + `" class="img-fluid mb-2" style="height: 25px;">
         <small>` + product.category + `</small>
@@ -362,13 +361,13 @@ function loadProducts(categoryIndex) {
           </div>
       </div>
       `;
-    
+
     });
   }
 
 }
 
-window.onload = function() {
+window.onload = function () {
   loadProducts(0);
 };
 
