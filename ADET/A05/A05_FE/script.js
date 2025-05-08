@@ -2,13 +2,15 @@ var categories = [];
 var products = [];
 
 const getAllCategories = async () => {
-  fetch(
-    'http://localhost/cspadua.github.io/ADET/A04_FE&BE/A04_BE/categories.php'
-  )
+  fetch('http://localhost/cspadua.github.io/ADET/A05/A05_BE/categories.php')
     .then(response => response.json())
     .then(data => {
       categories = data;
       loadCategories();
+
+      if (categories.length > 0) {
+        getAllProducts(categories[0].categoryID);
+      }
     });
 }
 
@@ -18,7 +20,7 @@ const getAllProducts = async (categoryID) => {
   };
 
   fetch(
-    'http://localhost/cspadua.github.io/ADET/A04_FE&BE/A04_BE/products.php', {
+    'http://localhost/cspadua.github.io/ADET/A05/A05_BE/products.php', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -117,7 +119,6 @@ function updateTaxAndFinalPrice() {
 document.getElementById('resetBtn').addEventListener('click', function () {
 
   document.getElementById('receipt').innerHTML = '';
-
 
   total = 0;
   document.getElementById('totalValue').textContent = '₱0';
