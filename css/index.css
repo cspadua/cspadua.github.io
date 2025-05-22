@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap');
+
+body {
+    background-color: #000;
+}
+
+#logo {
+    height: 50px;
+    width: auto;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='grey' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.nav-link {
+    color: #dfdfdf;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    color: #424242;
+}
+
+  .nav-link.active {
+    color: #424242;
+    font-weight: bold;
+  }
+
+h1 {
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 4.7vw;
+    margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+    #intro-txt {
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        text-align: start;
+    }
+}
+
+/* Projects */
+
+#projects {
+    background-color: #fff;
+}
+
+.welcome-txt {
+    color: #000;
+    font-family: 'DM Serif Text', serif;
+    font-size: 17vw;
+    line-height: .9;
+}
+
+.my-projects-txt {
+    color: #000;
+    font-size: 1.4rem;
+    font-family: 'DM Serif Text', serif;
+    font-style: italic;
+    margin-top: -20;
+
+}
+
+.line {
+    height: 2px;
+    background-color: black !important;
+    border: none;
+    width: 70%;
+    opacity: 1;
+}
+
+.projects-txt {
+    font-family: 'DM Serif Text', serif;
+    font-size: 8vw;
+    color: #000;
+}
+
+.click-to-see-more-txt {
+    color: #000;
+    font-size: 1.2rem;
+    font-family: 'DM Serif Text', serif;
+    font-style: italic;
+    margin-top: -10;
+}
+
+.custom-card {
+    height: 370px;
+    width: auto;
+    border-radius: 10px;
+    margin: 7px;
+    background-color: #CACACA;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-img {
+    max-width: 350px;
+    height: auto;
+    object-fit: contain;
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.custom-card:hover .custom-img {
+    filter: grayscale(100%) brightness(30%);
+    transform: scale(1.05); 
+}
+
+.hover-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    padding: 10px 0;
+    opacity: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.custom-card:hover .hover-title {
+    opacity: 1;
+}
+
+
+/* Contact */
+
+h5 {
+    color: #676767;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h3 {
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+#carl-img {
+    height: auto;
+    border-radius: 10px;
+    width: auto;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
