@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+body {
+    background-color: #F6F6F6;
+}
+
+.back {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    color: #000;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.back:hover {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    color: #474747;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.full-height {
+    height: 100vh;
+    overflow: hidden;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.line {
+    height: 2px;
+    background-color: black !important;
+    border: none;
+    width: 85%;
+    opacity: 1;
+    margin: auto;
+}
+
+
+.h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    color: #000;
+    font-size: 60px;
+}
+
+.h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #454545;
+    font-size: 30px;
+}
+
+.embed-card {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.embed-card img.card-image {
+    transition: filter 0.3s ease;
+}
+
+.embed-card:hover img.card-image {
+    filter: grayscale(100%) brightness(0.8);
+}
+
+.buy-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+
+    width: 200px;
+    color: white;
+    background-color: #BF1013;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    text-align: center;
+}
+
+.buy-btn:hover {
+    background-color: #770809;
+}
+
+.embed-card:hover .buy-btn {
+    opacity: 1;
+}
+.h5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #000;
+    font-size: 20px;
+}
+
+.paragraph {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #454545;
+    font-size: 15px;
+}
+
+#txt1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: #000;
+    font-size: 12px;
+
+}
+
+#txt2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #000;
+    font-size: 15px;
+
+}
+
+
+/* lalaland.html */
+
+.header-image-lalaland {
+    background-image: url('img/lalaland/header.png');
+    background-size: cover;
+    background-position: start;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 100%;
+}
+
+
+@media (max-width: 991.98px) {
+    .header-image-lalaland {
+        background-position: center;
+    }
+}
+
+
+.header-image-inter{
+    background-image: url('img/interstellar/header.png');
+    background-size: cover;
+    background-position: start;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 100%;
+}
+
+@media (max-width: 991.98px) {
+.header-image-inter{
+        background-position: center;
+    }
+}
+
+
+.header-image-fc{
+    background-image: url('img/fightClub/header.png');
+    background-size: cover;
+    background-position: start;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 100%;
+}
+
+@media (max-width: 991.98px) {
+.header-image-fc{
+        background-position: center;
+    }
+}
+
+
+
+
+
+
+#imdb {
+    margin-top: 27px;
+}
+
+#duration {
+    margin-top: 27px;
+}
+
+
+span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #000;
+    font-size: 25px;
+    text-align: justify;
+}
+
+
+.movieDescription {
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #424242;
+    font-size: 15px;
+    text-align: justify;
+
+}
+
+.booked,
+.available,
+.selected {
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #000;
+    font-size: 12px;
+}
+
+
+small {
+    font-family: 'Poppins', sans-serif;
+    color: #868686;
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+#yt-icon {
+
+transition: background-color 0.3s, transform 0.2s;
+
+}
+
+#yt-icon:hover {
+
+    transform: translateY(-3px);
+}
+
+.peso {
+    font-family: 'Poppins', sans-serif;
+    color: #868686;
+    font-size: 12px;
+    font-weight: 500;
+    font-weight: bold;
+
+}
+
+.seats {
+    font-family: 'Poppins', sans-serif;
+    color: #868686;
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+.text-muted-total{
+
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#finalPrice {
+    font-family: 'Inter', sans-serif;
+    color: #1E3930;
+    font-size: 40px;
+    font-weight: bolder;
+
+}
+
+#text-muted {
+    font-family: 'Inter', sans-serif;
+    color: #868686;
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+#finalPrice,
+#text-muted {
+    line-height: 1;
+}
+
+#printBtn {
+    width: 300px;
+    color: white;
+    background-color: #1E3930;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#printBtn:hover {
+    background-color: #003102;
+    transform: translateY(-3px);
+}
+
+
+#resetBtn {
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color: #511a1a;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#resetBtn:hover {
+    background-color: #350000;
+    transform: translateY(-3px);
+}

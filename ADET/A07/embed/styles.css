@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    background-color: #F6F6F6;
+}
+
+#emebedContainer {
+
+    background-color: #EDEDED;
+}
+
+.screentxt {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #8A8A8A;
+    font-size: 15px;
+    margin-top: -50px;
+}
+
+
+.modal-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    color: #000;
+    font-size: 20px;
+}
+
+.modal-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #000;
+    font-size: 10px;
+}
+
+#modalBody {
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #000;
+    font-size: 20px;
+}
+
+.btnNo {
+    width: 100px;
+    color: white;
+    background-color: #BF1013;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.btnYes {
+    width: 100px;
+    color: white;
+    background-color: #03352C;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.btnNo:hover {
+    background-color: #770809;
+}
+
+.btnYes:hover {
+    background-color: #011511;
+}
