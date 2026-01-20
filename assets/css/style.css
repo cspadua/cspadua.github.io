@@ -179,7 +179,6 @@ h4 {
 
 .about-card .card-text {
     display: -webkit-box;
-    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     min-height: calc(1.2em * 4);
@@ -202,12 +201,12 @@ h4 {
 
 @media (max-width: 576px) {
     .portfolio-btn {
-        padding: 8px 14px;
-        font-size: 13px;
+        padding: 3px 8px;
+        font-size: 12px;
     }
 
     .btn-icon {
-        width: 16px;
+        width: 12px;
     }
 }
 
@@ -224,7 +223,7 @@ h4 {
     #portfolio .col-12 > .card {
         margin-left: auto;
         margin-right: auto;
-        width: 90%; 
+        width: 100%; 
     }
 }
 
