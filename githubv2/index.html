@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS〡Carl Padua</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebarMenu" data-bs-offset="100" tabindex="0">
+
+    <div class="container-fluid">
+        <div class="row">
+
+
+            <button class="navbar-toggler d-md-none sticky-top" type="button" data-bs-toggle="collapse"
+                data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <nav id="sidebarMenu" class="collapse d-md-block col-12 col-md-3 col-lg-2 vh-100 sticky-top p-5">
+                <img src="images/logo.png" class="img-fluid mb-5" id="logo" alt="Logo">
+
+                <div class="nav flex-column p-0">
+                    <a href="#intro" class="nav-link p-0">Intro</a>
+                    <a href="#projects" class="nav-link p-0">Projects</a>
+                    <a href="#contact" class="nav-link p-0">Contact</a>
+                </div>
+            </nav>
+
+
+            <div class="col py-5">
+                <section id="intro" data-aos="fade-up" data-aos-duration="2000"
+                    class="mb-5 justify-content-center align-items-center d-flex flex-column">
+                    <h1 id="intro-txt">
+                        I’m Carl, an overthinker <br>with Figma always open. <br>I design with coffee,
+                        <br>procrastinations, and way <br>too many font choices.
+                    </h1>
+                </section>
+            </div>
+
+            <section id="projects" class="d-flex flex-column justify-content-center align-items-center text-center">
+                <div class="welcome-txt mt-5">WELCOME</div>
+                <div class="my-projects-txt">to my projects</div>
+
+                <hr class="line">
+
+                <div id="aDev" class="">
+                    <div class="projects-txt">a.dev projects &lt;ol&gt;</div>
+                    <div class="click-to-see-more-txt">click to see more details</div>
+                </div>
+
+                <div class="container text-center">
+
+                    <div class="row justify-content-center" id="aDevActivityContainer">
+                    </div>
+                </div>
+
+
+                <div id="wDev" class="my-3">
+                    <div class="projects-txt">w.dev projects &lt;ol&gt;</div>
+                    <div class="click-to-see-more-txt">click to see more details</div>
+                </div>
+
+                <div class="container text-center">
+
+                    <div class="row justify-content-center pb-5" id="activityContainer">
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="py-5" id="contact">
+                <div class="container" id="container-con">
+                    <div class="row justify-content-center align-items-center text-center text-md-start my-5">
+                        <div class="col-12 col-md-5 col-sm-12 p-0 m-0">
+                            <h5 class="p-0 m-0" data-aos="fade-up">You scrolled all the way down?</h5>
+                            <h3 class="mb-3 p-0 m-0" data-aos="fade-up">
+                                Thanks for visiting! This page isn’t <br>just for contact, it’s for connection.
+                                <br>Reach out, collaborate, or even share <br>your favorite songs and movies. :D
+                                <br>I’m listening.
+                            </h3>
+                        </div>
+                        <div class="col-12 col-md-4 cold-sm-4">
+                            <img src="images/home/carl.png" class="img-fluid" data-aos="fade-up" id="carl-img"
+                                alt="Carl">
+                        </div>
+
+                    </div>
+                    <div class="mt-5 mb-4 d-flex justify-content-center social-icons">
+                        <a href="https://www.facebook.com/Naieonnnn"><img src="images/home/fb.png"
+                                class="img-fluid"></a>
+                        <a href="https://www.instagram.com/c__l._.03/"><img src="images/home/ig.png"
+                                class="img-fluid"></a>
+                        <a href="https://github.com/cspadua"><img src="images/home/gh.png" class="img-fluid"></a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script>
+        var activity = [
+            "Activity 4",
+            "Activity 5",
+            "Activity 6",
+            "Activity 7",
+            "Midterm 1",
+            "Midterm 2"
+        ];
+
+        var activityPics = [
+            "images/activity4.png",
+            "images/activity5.png",
+            "images/activity6.png",
+            "images/activity7.png",
+            "images/midterm1.png",
+            "images/midterm2.png"
+        ];
+
+        var activityLinks = [
+            "webDev/Activity 4/index.html",
+            "webDev/Activity 5/index.html",
+            "webDev/Activity 6/index.html",
+            "webDev/Activity 7/index.html",
+            "webDev/Midterm 1/index.html",
+            "webDev/Midterm 2/banner.html"
+        ];
+
+        const activityContainer = document.getElementById("activityContainer");
+
+        for (let i = 0; i < activity.length; i++) {
+            const card = ` 
+   <div class="col-12 col-md-5 p-0">
+    <a href="${activityLinks[i]}">
+      <div class="card custom-card shadow p-0 d-flex justify-content-center align-items-center position-relative" id="activityCard${i}">
+        <img id="activityImg${i}" src="${activityPics[i]}" class="card-img-top custom-img">
+        <div class="hover-title">${activity[i]}</div>
+      </div>
+    </a>
+  </div>
+`;
+            activityContainer.innerHTML += card;
+        }
+
+    </script>
+
+    <script>
+        var activity = [
+            "A02",
+            "A03",
+            "A04",
+            "A07"
+        ];
+
+        var activityPics = [
+            "images/A02.png",
+            "images/A03.png",
+            "images/A04.png",
+            "images/A07.png"
+        ];
+
+        var activityLinks = [
+            "ADET/A02/index.php",
+            "ADET/A03/index.html",
+            "ADET/A04/index.html",
+            "ADET/A07/index.html"
+        ];
+
+        var aDevActivityContainer = document.getElementById("aDevActivityContainer");
+
+        for (let i = 0; i < activity.length; i++) {
+            const card = `
+  <div class="col-12 col-md-5 p-0">
+    <a href="${activityLinks[i]}">
+      <div class="card custom-card shadow p-0 d-flex justify-content-center align-items-center position-relative" id="activityCard${i}">
+        <img id="activityImg${i}" src="${activityPics[i]}" class="card-img-top custom-img">
+        <div class="hover-title">${activity[i]}</div>
+      </div>
+    </a>
+  </div>
+`;
+            aDevActivityContainer.innerHTML += card;
+        }
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

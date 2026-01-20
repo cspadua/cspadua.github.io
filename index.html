@@ -1,105 +1,437 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CS〡Carl Padua</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="icon" href="images/icon.png">
-    <link rel="stylesheet" href="css/index.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>cspadua</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/img/lightLogo.svg">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#sidebarMenu" data-bs-offset="100" tabindex="0">
+<body>
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="about">
         <div class="row">
 
+            <nav id="sideNav" class="d-none d-md-block col-md-2 col-lg-2 vh-100 sticky-top p-5">
+                <img src="assets/img/darkLogo.svg" class="mb-4" id="logo">
 
-            <button class="navbar-toggler d-md-none sticky-top" type="button" data-bs-toggle="collapse"
-                data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-
-            <nav id="sidebarMenu" class="collapse d-md-block col-12 col-md-3 col-lg-2 vh-100 sticky-top p-5">
-                <img src="images/logo.png" class="img-fluid mb-5" id="logo" alt="Logo">
-
-                <div class="nav flex-column p-0">
-                    <a href="#intro" class="nav-link p-0">Intro</a>
-                    <a href="#projects" class="nav-link p-0">Projects</a>
-                    <a href="#contact" class="nav-link p-0">Contact</a>
+                <div class="nav flex-column">
+                    <a href="#about" class="nav-link p-0">About</a>
+                    <a href="#cv" class="nav-link p-0">CV</a>
+                    <a href="#portfolio" class="nav-link p-0">Portfolio</a>
+                    <a href="#" class="nav-link p-0">Designs</a>
                 </div>
             </nav>
 
+            <section class="col-12 col-md-10 col-lg-10 px-5 mt-5">
 
-            <div class="col py-5">
-                <section id="intro" data-aos="fade-up" data-aos-duration="2000"
-                    class="mb-5 justify-content-center align-items-center d-flex flex-column">
-                    <h1 id="intro-txt">
-                        I’m Carl, an overthinker <br>with Figma always open. <br>I design with coffee,
-                        <br>procrastinations, and way <br>too many font choices.
-                    </h1>
-                </section>
-            </div>
+                <div class="h1">About Me</div>
 
-            <section id="projects" class="d-flex flex-column justify-content-center align-items-center text-center">
-                <div class="welcome-txt mt-5">WELCOME</div>
-                <div class="my-projects-txt">to my projects</div>
+                <!-- Main Row: Image + Text -->
+                <div class="row mt-5 justify-content-center align-items-center">
 
-                <hr class="line">
+                    <div class="col-md-5 mb-3">
+                        <img src="assets/img/me.png" class="img-fluid">
+                    </div>
 
-                <div id="aDev" class="">
-                    <div class="projects-txt">a.dev projects &lt;ol&gt;</div>
-                    <div class="click-to-see-more-txt">click to see more details</div>
-                </div>
+                    <!-- Text -->
+                    <div class="col-md-7 mt-4 position-relative">
+                        <!-- Decorative Sticker -->
+                        <img src="assets/img/hello.svg" alt="" class="position-absolute"
+                            style="top:-45px; left:-25px; width:80px; height:auto;">
 
-                <div class="container text-center">
+                        <!-- Text content -->
+                        <div class="mt-2">
+                            <h4>
+                                I’m Carl Stephene Padua, an IT student passionate about UI/UX design, front-end, and web
+                                development. I enjoy creating intuitive, visually engaging interfaces and continuously
+                                learning design trends and tools.
+                            </h4>
+                            <h4 class="mt-3">
+                                I draw inspiration from arts, music, and cinematography, which shape my visual style and
+                                storytelling. I believe that collaboration is an art that elevates great design.
+                            </h4>
+                        </div>
 
-                    <div class="row justify-content-center" id="aDevActivityContainer">
+                        <!-- Education & Skills Row -->
+                        <div class="row mt-3">
+                            <!-- Education Column -->
+                            <div class="col-md-8 mb-4 p-0">
+                                <h3>Education</h3>
+                                <div class="d-flex align-items-center mb-2">
+                                    <img src="assets/img/pupLogo.svg" id="pupLogo" class="me-2">
+                                    <div>
+                                        <div class="course">BS Information Technology</div>
+                                        <div class="school">Polytechnic University of the Philippines</div>
+                                        <div class="location">Santo Tomas Campus</div>
+                                        <div class="year">2022-2026</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Software Skills Column -->
+                            <div class="col-md-4 p-0 mb-4">
+                                <h3>Software Skills</h3>
+
+                                <div class="row g-0 mb-2">
+                                    <div class="col-4 p-0 text-start">
+                                        <img src="assets/img/premiereLogo.svg" alt="Premiere"
+                                            style="width:45px; height:auto;">
+                                    </div>
+                                    <div class="col-4 p-0 text-start">
+                                        <img src="assets/img/psLogo.svg" alt="Photoshop"
+                                            style="width:45px; height:auto;">
+                                    </div>
+                                    <div class="col-4 p-0 text-start">
+                                        <img src="assets/img/canvaLogo.svg" alt="Canva"
+                                            style="width:45px; height:auto;">
+                                    </div>
+                                </div>
+
+                                <div class="row g-0">
+                                    <div class="col-4 p-0 text-start">
+                                        <img src="assets/img/figmaLogo.svg" alt="Figma"
+                                            style="width:45px; height:auto;">
+                                    </div>
+                                    <div class="col-4 p-0 text-start">
+                                        <img src="assets/img/vscodeLogo.svg" alt="VS Code"
+                                            style="width:45px; height:auto;">
+                                    </div>
+                                    <div class="col-4 p-0 text-start">
+                                        <img src="assets/img/capcutLogo.svg" alt="CapCut"
+                                            style="width:45px; height:auto;">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-
-                <div id="wDev" class="my-3">
-                    <div class="projects-txt">w.dev projects &lt;ol&gt;</div>
-                    <div class="click-to-see-more-txt">click to see more details</div>
-                </div>
-
-                <div class="container text-center">
-
-                    <div class="row justify-content-center pb-5" id="activityContainer">
-                    </div>
-                </div>
-
             </section>
 
-            <section class="py-5" id="contact">
-                <div class="container" id="container-con">
-                    <div class="row justify-content-center align-items-center text-center text-md-start my-5">
-                        <div class="col-12 col-md-5 col-sm-12 p-0 m-0">
-                            <h5 class="p-0 m-0" data-aos="fade-up">You scrolled all the way down?</h5>
-                            <h3 class="mb-3 p-0 m-0" data-aos="fade-up">
-                                Thanks for visiting! This page isn’t <br>just for contact, it’s for connection.
-                                <br>Reach out, collaborate, or even share <br>your favorite songs and movies. :D
-                                <br>I’m listening.
-                            </h3>
-                        </div>
-                        <div class="col-12 col-md-4 cold-sm-4">
-                            <img src="images/home/carl.png" class="img-fluid" data-aos="fade-up" id="carl-img"
-                                alt="Carl">
-                        </div>
+            <section id="cv" class="px-5 py-5" style="background-color: #434343;">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- spacer for sidebar -->
+                        <div class="d-none d-md-block col-md-2"></div>
 
+                        <!-- main content -->
+                        <div class="col-10">
+                            <div class="h1 mt-4" style="color: #FDFDFD;">Curriculum Vitae</div>
+                            <a href="assets/cv/Carl Padua CV.pdf" target="_blank" class="btn custom-btn mb-3">
+                                View CV
+                            </a>
+
+                            <!-- Experience & Training -->
+                            <div class="mb-4">
+                                <h2 class="underlined mb-3">Experience & Training</h2>
+
+                                <ul class="experience-list ps-3 mb-2">
+                                    <li><strong>Special Program for Employment of Students</strong></li>
+                                </ul>
+
+                                <div class="row thick-border ps-2 mx-3">
+                                    <div class="col-12 mb-1 cv-location">
+                                        Palo Alto, Calamba City, Laguna
+                                    </div>
+                                    <div class="col-12 mb-1 cv-date">
+                                        2022
+                                    </div>
+                                    <div class="col-12 cv-description">
+                                        Collected and organized employment data of barangay residents for government job
+                                        placement programs. Assisted local officials in community employment
+                                        initiatives.
+                                    </div>
+                                </div>
+
+                                <ul class="experience-list ps-3 mb-2 mt-3">
+                                    <li><strong>Computer Hardware Service Training</strong></li>
+                                </ul>
+
+                                <div class="row thick-border ps-2 mx-3 ">
+                                    <div class="col-12 mb-1 cv-location">
+                                        Colegio de San Juan de Letran Calamba
+                                    </div>
+                                    <div class="col-12 mb-1 cv-date">
+                                        2017-2018
+                                    </div>
+                                    <div class="col-12 cv-description">
+                                        Computer hardware troubleshooting and system maintenance Networking fundamentals
+                                        using Cisco technologies
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <h2 class="underlined mb-3">Projects</h2>
+
+                                <ul class="experience-list ps-3 mb-2">
+                                    <li><strong>Ecorent: Sustainable Item Rental Platform</strong></li>
+                                </ul>
+
+                                <div class="row thick-border ps-2 mx-3">
+                                    <div class="col-12 mb-1 cv-location">
+                                        Polytechnic University of the Philippines
+                                    </div>
+                                    <div class="col-12 mb-1 cv-date">
+                                        2024
+                                    </div>
+                                    <div class="col-12 cv-description">
+                                        Full-stack development and UI/UX design for a platform promoting item reuse and
+                                        sustainability
+                                    </div>
+                                </div>
+
+                                <ul class="experience-list ps-3 mb-2 mt-3">
+                                    <li><strong>GabayIsko: PUP Sto. Tomas Admission Website</strong></li>
+                                </ul>
+
+                                <div class="row thick-border ps-2 mx-3 ">
+                                    <div class="col-12 mb-1 cv-location">
+                                        Polytechnic University of the Philippines
+                                    </div>
+                                    <div class="col-12 mb-1 cv-date">
+                                        2024-2026
+                                    </div>
+                                    <div class="col-12 cv-description">
+                                        Full-stack development and UI/UX design for the university admission platform
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mt-5 mb-4 d-flex justify-content-center social-icons">
-                        <a href="https://www.facebook.com/Naieonnnn"><img src="images/home/fb.png"
-                                class="img-fluid"></a>
-                        <a href="https://www.instagram.com/c__l._.03/"><img src="images/home/ig.png"
-                                class="img-fluid"></a>
-                        <a href="https://github.com/cspadua"><img src="images/home/gh.png" class="img-fluid"></a>
+                </div>
+            </section>
+
+            <section id="portfolio" class="p-5" style="background-color: #FDFDFD;">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- spacer for sidebar -->
+                        <div class="d-none d-md-block col-md-2"></div>
+
+                        <!-- main content -->
+                        <div class="col-10">
+                            <div class="h1 m-0" style="color: #434343;">My Portfolio</div>
+                            <div class="paragraph mx-2 mb-4">These are some of my works.</div>
+
+                            <!-- Portfolio Cards Row -->
+                            <div class="row g-3 justify-content-center">
+
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="shadow card about-card rounded-5 overflow-hidden">
+
+                                        <!-- image -->
+                                        <div class="card-image position-relative">
+                                            <img src="assets/img/projects/gabayisko.jpg" alt="GabayIsko Project"
+                                                data-bs-toggle="modal" data-bs-target="#imageModal"
+                                                data-bs-img="assets/img/projects/gabayisko.jpg">
+                                        </div>
+
+                                        <!-- body -->
+                                        <div class="card-body" style="background-color: #434343; color: #FDFDFD;">
+                                            <h5 class="card-title">GabayIsko</h5>
+                                            <p class="card-text">
+                                                GabayIsko is a capstone project that streamlines admissions
+                                                communication by
+                                                automating email workflows, allowing the admissions office to send
+                                                applicant
+                                                emails faster and more efficiently.
+                                            </p>
+                                            <div class="d-flex justify-content-center gap-3 mt-4 portfolio-btn-wrapper">
+                                                <a href="https://gabayisko.pupstc.com/"
+                                                    class="btn portfolio-btn d-flex align-items-center gap-2">
+                                                    <img src="assets/img/view.svg" class="btn-icon">
+                                                    View
+                                                </a>
+                                                <a href="https://github.com/IskoEdukasyon/GabayIsko"
+                                                    class="btn portfolio-btn d-flex align-items-center gap-2">
+                                                    <img src="assets/img/documentation.svg" class="btn-icon">
+                                                    Documentation
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="shadow card about-card rounded-5 overflow-hidden">
+
+                                        <!-- image -->
+                                        <div class="card-image position-relative">
+                                            <img src="assets/img/projects/ecorent.jpg" alt="Ecorent Project"
+                                                data-bs-toggle="modal" data-bs-target="#imageModal"
+                                                data-bs-img="assets/img/projects/ecorent.jpg">
+                                        </div>
+
+                                        <!-- body -->
+                                        <div class="card-body" style="background-color: #434343; color: #FDFDFD;">
+                                            <h5 class="card-title">Ecorent</h5>
+                                            <p class="card-text">
+                                                Ecorent is a rental website focused on eco-friendly sharing, helping
+                                                reduce waste by promoting reuse instead of single-use purchases.
+                                            </p>
+                                            <div class="d-flex justify-content-center gap-3 mt-4 portfolio-btn-wrapper">
+                                                <a href="#" class="btn portfolio-btn d-flex align-items-center gap-2">
+                                                    <img src="assets/img/view.svg" class="btn-icon">
+                                                    View
+                                                </a>
+                                                <a href="https://github.com/G2-Green-Horizon/ecorent.com"
+                                                    class="btn portfolio-btn d-flex align-items-center gap-2">
+                                                    <img src="assets/img/documentation.svg" class="btn-icon">
+                                                    Documentation
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="shadow card about-card rounded-5 overflow-hidden">
+
+                                        <!-- image -->
+                                        <div class="card-image position-relative">
+                                            <img src="assets/img/projects/Lora.jpg" alt="Lora Project"
+                                                data-bs-toggle="modal" data-bs-target="#imageModal"
+                                                data-bs-img="assets/img/projects/Lora.jpg">
+                                        </div>
+
+                                        <!-- body -->
+                                        <div class="card-body" style="background-color: #434343; color: #FDFDFD;">
+                                            <h5 class="card-title">Lora</h5>
+                                            <p class="card-text">
+                                                Lora is a POS website for the coffee shop Lora that manages transactions
+                                                and showcases all the coffee varieties available.
+                                            </p>
+                                            <div class="d-flex justify-content-center gap-3 mt-4 portfolio-btn-wrapper">
+                                                <a href="ADET/A04/index.html"
+                                                    class="btn portfolio-btn d-flex align-items-center gap-2">
+                                                    <img src="assets/img/view.svg" class="btn-icon">
+                                                    View
+                                                </a>
+                                                <a href="https://github.com/cspadua/cspadua.github.io/tree/main/ADET/A04"
+                                                    class="btn portfolio-btn d-flex align-items-center gap-2">
+                                                    <img src="assets/img/documentation.svg" class="btn-icon">
+                                                    Documentation
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="shadow card about-card rounded-5 overflow-hidden">
+
+                                        <!-- image -->
+                                        <div class="card-image position-relative">
+                                            <img src="assets/img/projects/faye.jpg" alt="Faye Webster Project"
+                                                data-bs-toggle="modal" data-bs-target="#imageModal"
+                                                data-bs-img="assets/img/projects/faye.jpg">
+                                        </div>
+
+                                        <!-- body -->
+                                        <div class="card-body" style="background-color: #434343; color: #FDFDFD;">
+                                            <h5 class="card-title">Faye Webster</h5>
+                                            <p class="card-text">
+                                                Faye Webster is a website that showcases my appreciation for the artist,
+                                                featuring her Underdressed at the Symphony album along with details
+                                                about her and her music.
+                                            </p>
+                                            <div class="d-flex justify-content-center gap-3 mt-4 portfolio-btn-wrapper">
+                                                <a href="ADET/A03/index.html"
+                                                    class="btn portfolio-btn d-flex align-items-center gap-2">
+                                                    <img src="assets/img/view.svg" class="btn-icon">
+                                                    View
+                                                </a>
+                                                <a href="https://github.com/cspadua/cspadua.github.io/tree/main/ADET/A03"
+                                                    class="btn portfolio-btn d-flex align-items-center gap-2">
+                                                    <img src="assets/img/documentation.svg" class="btn-icon">
+                                                    Documentation
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="shadow card about-card rounded-5 overflow-hidden">
+
+                                        <!-- image -->
+                                        <div class="card-image position-relative">
+                                            <img src="assets/img/projects/TicketHub.jpg" alt="TicketHub Project"
+                                                data-bs-toggle="modal" data-bs-target="#imageModal"
+                                                data-bs-img="assets/img/projects/TicketHub.jpg">
+                                        </div>
+
+                                        <!-- body -->
+                                        <div class="card-body" style="background-color: #434343; color: #FDFDFD;">
+                                            <h5 class="card-title">TicketHub</h5>
+                                            <p class="card-text">
+                                                Tickethub is a website that allows users to reserve movie theater seats
+                                                while viewing trailers and brief movie details.
+                                            </p>
+                                            <div class="d-flex justify-content-center gap-3 mt-4 portfolio-btn-wrapper">
+                                                <a href="ADET/A07/index.html"
+                                                    class="btn portfolio-btn d-flex align-items-center gap-2">
+                                                    <img src="assets/img/view.svg" class="btn-icon">
+                                                    View
+                                                </a>
+                                                <a href="https://github.com/cspadua/cspadua.github.io/tree/main/ADET/A07"
+                                                    class="btn portfolio-btn d-flex align-items-center gap-2">
+                                                    <img src="assets/img/documentation.svg" class="btn-icon">
+                                                    Documentation
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="shadow card about-card rounded-5 overflow-hidden">
+
+                                        <!-- image -->
+                                        <div class="card-image position-relative">
+                                            <img src="assets/img/projects/adventureTime.jpg"
+                                                alt="Adventure Time Project" data-bs-toggle="modal"
+                                                data-bs-target="#imageModal"
+                                                data-bs-img="assets/img/projects/adventureTime.jpg">
+                                        </div>
+
+                                        <!-- body -->
+                                        <div class="card-body" style="background-color: #434343; color: #FDFDFD;">
+                                            <h5 class="card-title">Adventure Time</h5>
+                                            <p class="card-text">
+                                                Adventure Time is a parallax website that showcases the characters,
+                                                locations, and episodes of the Adventure Time series.
+                                            </p>
+                                            <div class="d-flex justify-content-center gap-3 mt-4 portfolio-btn-wrapper">
+                                                <a href="webDev/Midterm 2/banner.html"
+                                                    class="btn portfolio-btn d-flex align-items-center gap-2">
+                                                    <img src="assets/img/view.svg" class="btn-icon">
+                                                    View
+                                                </a>
+                                                <a href="https://github.com/cspadua/cspadua.github.io/tree/main/webDev/Midterm%202"
+                                                    class="btn portfolio-btn d-flex align-items-center gap-2">
+                                                    <img src="assets/img/documentation.svg" class="btn-icon">
+                                                    Documentation
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- End cards row -->
+                        </div>
                     </div>
                 </div>
             </section>
@@ -107,101 +439,43 @@
         </div>
     </div>
 
-    <script>
-        var activity = [
-            "Activity 4",
-            "Activity 5",
-            "Activity 6",
-            "Activity 7",
-            "Midterm 1",
-            "Midterm 2"
-        ];
-
-        var activityPics = [
-            "images/activity4.png",
-            "images/activity5.png",
-            "images/activity6.png",
-            "images/activity7.png",
-            "images/midterm1.png",
-            "images/midterm2.png"
-        ];
-
-        var activityLinks = [
-            "webDev/Activity 4/index.html",
-            "webDev/Activity 5/index.html",
-            "webDev/Activity 6/index.html",
-            "webDev/Activity 7/index.html",
-            "webDev/Midterm 1/index.html",
-            "webDev/Midterm 2/banner.html"
-        ];
-
-        const activityContainer = document.getElementById("activityContainer");
-
-        for (let i = 0; i < activity.length; i++) {
-            const card = ` 
-   <div class="col-12 col-md-5 p-0">
-    <a href="${activityLinks[i]}">
-      <div class="card custom-card shadow p-0 d-flex justify-content-center align-items-center position-relative" id="activityCard${i}">
-        <img id="activityImg${i}" src="${activityPics[i]}" class="card-img-top custom-img">
-        <div class="hover-title">${activity[i]}</div>
-      </div>
-    </a>
-  </div>
-`;
-            activityContainer.innerHTML += card;
-        }
-
-    </script>
-
-    <script>
-        var activity = [
-            "A02",
-            "A03",
-            "A04",
-            "A07"
-        ];
-
-        var activityPics = [
-            "images/A02.png",
-            "images/A03.png",
-            "images/A04.png",
-            "images/A07.png"
-        ];
-
-        var activityLinks = [
-            "ADET/A02/index.php",
-            "ADET/A03/index.html",
-            "ADET/A04/index.html",
-            "ADET/A07/index.html"
-        ];
-
-        var aDevActivityContainer = document.getElementById("aDevActivityContainer");
-
-        for (let i = 0; i < activity.length; i++) {
-            const card = `
-  <div class="col-12 col-md-5 p-0">
-    <a href="${activityLinks[i]}">
-      <div class="card custom-card shadow p-0 d-flex justify-content-center align-items-center position-relative" id="activityCard${i}">
-        <img id="activityImg${i}" src="${activityPics[i]}" class="card-img-top custom-img">
-        <div class="hover-title">${activity[i]}</div>
-      </div>
-    </a>
-  </div>
-`;
-            aDevActivityContainer.innerHTML += card;
-        }
-
-    </script>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        document.addEventListener("DOMContentLoaded", function () {
+            const sideNav = document.getElementById("sideNav");
+            const logo = document.getElementById("logo");
+            const navLinks = sideNav.querySelectorAll(".nav-link");
+            const cvSection = document.getElementById("cv");
+            const portfolioSection = document.getElementById("portfolio");
+
+            const updateNavStyle = () => {
+                const scrollPos = window.scrollY || window.pageYOffset;
+                const cvTop = cvSection.offsetTop;
+                const portfolioTop = portfolioSection.offsetTop;
+
+                if (scrollPos >= cvTop - 50 && scrollPos < portfolioTop - 50) {
+                    // In CV section
+                    logo.src = "assets/img/lightLogo.svg";
+                    navLinks.forEach(link => link.style.color = "#FDFDFD");
+                } else {
+                    // Outside CV section (default)
+                    logo.src = "assets/img/darkLogo.svg";
+                    navLinks.forEach(link => link.style.color = "");
+                }
+            };
+
+            // Initial check
+            updateNavStyle();
+
+            // Update on scroll
+            window.addEventListener("scroll", updateNavStyle);
+        });
     </script>
+    
+
 </body>
 
 </html>
