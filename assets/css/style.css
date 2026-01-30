@@ -244,3 +244,34 @@ h4 {
     }
 }
 
+@media (max-width: 767.98px) {
+    #design .row {
+        justify-content: center; 
+    }
+
+    #design .col-12 {
+        padding-left: 0;   
+        padding-right: 0;  
+    }
+
+    #design .col-12 > .card {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+}
+
+.design-showcase {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    object-fit: contain;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.design-showcase:hover {
+    transform: scale(1.01);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+}
