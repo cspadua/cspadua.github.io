@@ -11,7 +11,7 @@ body {
 }
 
 .nav-link {
-    color: #434343;
+    color: #9C9C9C;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 13px;
@@ -75,8 +75,8 @@ h4 {
 
 .custom-btn {
     background-color: transparent;
-    color: #FDFDFD;
-    border: 2px solid #FDFDFD;
+    color: #434343;
+    border: 2px solid #434343;
     border-radius: 25px;
     padding: 0.6rem 1.5rem;
     font-weight: 600;
@@ -85,26 +85,27 @@ h4 {
 }
 
 .custom-btn:hover {
-    background-color: #FDFDFD;
+    background-color: #434343;
+    color: #FDFDFD;
     transform: translateY(-2px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .underlined {
     text-decoration: underline;
-    color: #FDFDFD;
+    color: #434343;
 }
 
 .experience-list li {
     font-size: 1.2rem;
     font-family: 'Poppins', sans-serif;
-    color: #FDFDFD;
+    color: #434343;
 }
 
 .cv-location {
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
-    color: #FDFDFD;
+    color: #434343;
     font-weight: 500;
     text-align: justify;
 }
@@ -112,20 +113,20 @@ h4 {
 .cv-date {
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
-    color: #FDFDFD;
+    color: #434343;
     font-weight: 500;
 }
 
 .cv-description {
     font-size: .8rem;
     font-family: 'Poppins', sans-serif;
-    color: #FDFDFD;
+    color: #434343;
     font-weight: 200;
     text-align: justify;
 }
 
 .thick-border {
-    border-left: 4px solid #FDFDFD;
+    border-left: 4px solid #434343;
 
 }
 
@@ -212,32 +213,32 @@ h4 {
 
 @media (max-width: 767.98px) {
     #portfolio .row {
-        justify-content: center; 
+        justify-content: center;
     }
 
     #portfolio .col-12 {
-        padding-left: 0;  
-        padding-right: 0;  
+        padding-left: 0;
+        padding-right: 0;
     }
 
-    #portfolio .col-12 > .card {
+    #portfolio .col-12>.card {
         margin-left: auto;
         margin-right: auto;
-        width: 100%; 
+        width: 100%;
     }
 }
 
 @media (max-width: 767.98px) {
     #cv .row {
-        justify-content: center; 
+        justify-content: center;
     }
 
     #cv .col-12 {
-        padding-left: 0;   
-        padding-right: 0;  
+        padding-left: 0;
+        padding-right: 0;
     }
 
-    #cv .col-12 > .card {
+    #cv .col-12>.card {
         margin-left: auto;
         margin-right: auto;
         width: 90%;
@@ -246,15 +247,15 @@ h4 {
 
 @media (max-width: 767.98px) {
     #design .row {
-        justify-content: center; 
+        justify-content: center;
     }
 
     #design .col-12 {
-        padding-left: 0;   
-        padding-right: 0;  
+        padding-left: 0;
+        padding-right: 0;
     }
 
-    #design .col-12 > .card {
+    #design .col-12>.card {
         margin-left: auto;
         margin-right: auto;
         width: 90%;
@@ -266,12 +267,53 @@ h4 {
     height: auto;
     display: block;
     border-radius: 18px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
     object-fit: contain;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .design-showcase:hover {
     transform: scale(1.01);
-    box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-title {
+    font-size: 13rem;
+}
+
+@media (max-width: 1200px) {
+    .portfolio-title {
+        font-size: 9rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-title {
+        font-size: 6rem;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .portfolio-title {
+        font-size: 5rem;
+        letter-spacing: -2px;
+        /* optional: tighter looks better on small screens */
+        margin-bottom: 50px;
+    }
+}
+
+.filter-item {
+    display: none;
+}
+
+.folder-hover {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+.folder-hover:hover {
+    transform: scale(1.08) translateY(-5px);
+    filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.3));
 }
