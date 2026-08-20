@@ -16,6 +16,27 @@
 
 <body>
 
+    <div id="loader">
+
+        <div class="loader-content">
+
+            <div class="loader-brand">
+                cspadua
+            </div>
+
+            <div class="loader-info">
+                <span>PORTFOLIO</span>
+                <span id="loader-percent">0%</span>
+            </div>
+
+            <div class="loader-line">
+                <div id="loader-progress"></div>
+            </div>
+
+        </div>
+
+    </div>
+
     <img src="newPortfolio/slices/Slice 1.png" alt="" class="slice">
     <img src="newPortfolio/slices/Slice 2.png" alt="" class="slice">
     <img src="newPortfolio/slices/Slice 3.png" alt="" class="slice">
@@ -361,6 +382,52 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+    <script>
+        const loader = document.getElementById("loader");
+        const progress = document.getElementById("loader-progress");
+        const percent = document.getElementById("loader-percent");
+
+        const images = document.images;
+        let loadedImages = 0;
+
+        function updateProgress() {
+            loadedImages++;
+
+            const percentage = Math.round(
+                (loadedImages / images.length) * 100
+            );
+
+            progress.style.width = percentage + "%";
+            percent.textContent = percentage + "%";
+        }
+
+        if (images.length === 0) {
+            updateProgress();
+        } else {
+            for (let img of images) {
+
+                if (img.complete) {
+                    updateProgress();
+                } else {
+                    img.addEventListener("load", updateProgress);
+                    img.addEventListener("error", updateProgress);
+                }
+
+            }
+        }
+
+        window.addEventListener("load", function () {
+
+            progress.style.width = "100%";
+            percent.textContent = "100%";
+
+            setTimeout(function () {
+                loader.classList.add("loaded");
+            }, 400);
+
+        });
+    </script>
 
 </body>
 
